@@ -7,18 +7,18 @@
     <title>login</title>
 </head>
 <body>
-    <form action="">
+    <form  action="<?php echo URLROOT; ?>/ControllerCompte/ insert" method="POST">
         <label for="">name</label>
-        <input type="text" >
+        <input type="text" name="name" >
         <label for="">lname</label>
-        <input type="text" >
+        <input type="text" name="lname">
         <label for="">Email</label>
-        <input type="text" >
+        <input type="text" name="email">
         <label for="">password</label>
-        <input type="text" >
+        <input type="text" name="password">
         <label for="cars">Choose a car:</label>
-<select name="cars" id="cars">
-  <option value="volvo">client</option>
+<select name="cars" name="role" id="cars">
+  <option value="volvo" >client</option>
   <option value="saab">pharmasy</option>
 </select>
         <label for=""></label>

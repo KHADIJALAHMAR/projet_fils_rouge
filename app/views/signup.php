@@ -7,7 +7,7 @@
     <title>login</title>
 </head>
 <body>
-    <form  action="<?php echo URLROOT; ?>/ControllerCompte/ insert" method="POST">
+    <form  action="<?php echo URLROOT; ?>/ControllerCompte/add_post" method="POST">
         <label for="">name</label>
         <input type="text" name="name" >
         <label for="">lname</label>
@@ -21,9 +21,7 @@
   <option value="volvo" >client</option>
   <option value="saab">pharmasy</option>
 </select>
-        <label for=""></label>
-        <input type="text" >
-        <input type="submit">
+        <input type="submit" name="submit">
     </form>
     
 </body>

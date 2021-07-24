@@ -6,6 +6,18 @@ class ModelCompte
     public function __construct(){
         $this->db = new Database;
 }  
+public function show_compte($email,$password){
+    $this->db->query("SELECT * FROM `users`  WHERE email=:email AND pass_word=:pass_word" );
+    $this->db->bind(':email', $email);
+    $this->db->bind(':pass_word', $password);
+    $results = $this->db->single();
+
+    return $results;
+}
+
+
+
+
 public function add_compte($data)
 
 {

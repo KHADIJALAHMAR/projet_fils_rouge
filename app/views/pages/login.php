@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<form  action="<?php echo URLROOT; ?>/ControllerCompte/login" method="POST">
+<form  action="<?php echo URLROOT; ?>/ControllerCompte/select" method="POST">
         <label for="">Email</label>
         <input type="text" name="email">
         <label for="">password</label>

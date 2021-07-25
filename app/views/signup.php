@@ -7,7 +7,7 @@
     <title>login</title>
 </head>
 <body>
-    <form  action="<?php echo URLROOT; ?>/ControllerCompte/add_post" method="POST">
+    <form  action="<?php echo URLROOT; ?>/ControllerCompte/insert" method="POST">
         <label for="">name</label>
         <input type="text" name="name" >
         <label for="">lname</label>

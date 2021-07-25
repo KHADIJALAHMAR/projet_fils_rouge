@@ -29,7 +29,7 @@ public function select(){
       $email= $_POST['email'];
       $password= $_POST['password'];
     
-  $result = $this->model->signup($email,$password);
+  $result = $this->model->login($email,$password);
   if($result){
     redirect('ControllerCompte/index');
   }

@@ -31,9 +31,9 @@ public function signup($data)
      return $exucute_data;
 
      if($exucute_data){
-        echo "insert exucute";
+        echo "insert  exist";
     }else{
-        echo"not exucute";
+        echo"insert does not exist";
     }
 }
 

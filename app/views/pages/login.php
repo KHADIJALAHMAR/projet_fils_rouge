@@ -12,6 +12,7 @@
         <input type="text" name="email">
         <label for="">password</label>
         <input type="text" name="password">
+        <a href="<?php echo URLROOT; ?>/ControllerCompte/insert">signup</a>
         <input type="submit" name="submit">
 
 </form>

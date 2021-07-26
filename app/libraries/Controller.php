@@ -7,9 +7,10 @@
     // Load model
     public function model($model){
       // Require model file
-      if (file_exists(require_once '../app/models/' . $model . '.php')) {
-        require_once '../app/models/' . $model . '.php';
-      }
+      // if (file_exists(require_once '../app/models/' . $model . '.php')) {
+      //   require_once '../app/models/' . $model . '.php';
+      // }
+      require_once '../app/models/' . $model . '.php';
       return new $model();
     }
     // Load view

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="TbJ0vHO_dayiP_WGaukV" name="Page-1">
-        <mxGraphModel dx="490" dy="1717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+        <mxGraphModel dx="405" dy="1322" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -15,8 +15,8 @@
                 <mxCell id="130" value="Pharmacy" style="swimlane;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;startSize=23;" parent="1" vertex="1">
                     <mxGeometry x="1230" y="420" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="131" value="&lt;u&gt;id-pharmacy&lt;br&gt;&lt;/u&gt;localisation&lt;br&gt;imgPh&lt;br&gt;email&lt;br&gt;phoneNbr&lt;br&gt;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#FEFAE0;" parent="130" vertex="1">
-                    <mxGeometry x="55" y="90" width="90" height="20" as="geometry"/>
+                <mxCell id="131" value="&lt;u&gt;id-pharmacy&lt;br&gt;&lt;/u&gt;localisation&lt;br&gt;imgPh&lt;br&gt;phoneNbr&lt;br&gt;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#FEFAE0;" parent="130" vertex="1">
+                    <mxGeometry x="40" y="90" width="90" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="135" target="140" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -146,7 +146,7 @@
                 <mxCell id="183" value="Medicament" style="swimlane;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="1" vertex="1">
                     <mxGeometry x="1041" y="700" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="184" value="&lt;u&gt;id-medicament&lt;br&gt;&lt;/u&gt;nameM&lt;br&gt;description" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#FEFAE0;" parent="183" vertex="1">
+                <mxCell id="184" value="&lt;u&gt;id-medicament&lt;br&gt;&lt;/u&gt;nameM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#FEFAE0;" parent="183" vertex="1">
                     <mxGeometry x="53.5" y="65" width="95" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="188" value="notification" style="swimlane;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="1" vertex="1">

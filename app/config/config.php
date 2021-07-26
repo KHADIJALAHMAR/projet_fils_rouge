@@ -7,9 +7,9 @@
 
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
-  define('APPROOT2', dirname(dirname(dirname(__FILE__))));
+  // define('APPROOT2', dirname(dirname(dirname(__FILE__))));
   // URL Root
-  define('URLROOT', 'http://localhost/prejet_fils_rouge');
+  define('URLROOT', 'http://localhost/projet_fils_rouge');
   // Site Name
   define('SITENAME', ' management');
   // App Version

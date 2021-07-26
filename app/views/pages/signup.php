@@ -16,10 +16,10 @@
         <input type="text" name="email">
         <label for="">password</label>
         <input type="text" name="password">
-        <label for="cars">Choose a car:</label>
-<select name="cars" name="role" id="cars">
-  <option value="volvo" >client</option>
-  <option value="saab">pharmasy</option>
+        <label for="cars" name="role">Choose a car:</label>
+<select id="cars" name="role">
+  <option  >client</option>
+  <option >pharmasy</option></option>
 </select>
         <input type="submit" name="submit">
     </form>

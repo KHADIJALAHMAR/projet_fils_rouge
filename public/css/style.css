@@ -1,4 +1,4 @@
-.row{
+/* .row{
     margin-left: 0% !important;
     margin-right: 0% !important;
 }
@@ -7,6 +7,40 @@
 }
 #wow{
     width: 220px;
-   
-     }
 
+     } */
+/* login form */
+/* .row{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px;
+}
+body{
+background-color: springgreen;
+}
+section{
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+/* landing page css */
+/* navbar */
+/* ###########################################################################*/
+/* background colors */
+.bg-nav{
+    background: rgba(212, 14, 14, 0.4) !important;
+}
+.bg-second{
+    background-color: #363636;
+}
+/* style */
+.hero-header{
+    height: 750px;
+}
+.wave{
+    bottom: 0;
+}
+
+body{
+    background-color: darksalmon !important;
+}

@@ -23,7 +23,7 @@
 
 if ($this->model->signup($data)) {
 
-  redirect('Controllercompte/Login');
+ $this->view('pages/login');
 }
       else{
         $this->view('pages/signup');
@@ -37,14 +37,22 @@ public function select(){
      if(isset($_POST['submit'])){
       $email= $_POST['email'];
       $password= $_POST['password'];
+       //validation email
+       if (empty($data['email'])) {
+        echo "please enter your email";
+    }
+      //validation password
+      if (empty($data['password'])) {
+        echo "please enter your password";
+    }
     
   $result = $this->model->login($email,$password);
   if($result){
-    redirect('ControllerCompte/index');
+   $this->view('pages/index');
   }
-  }
-  $this->view('pages/signup');
+  }else{
+    $this->view('pages/login');
   }
 
-
+  }
 }

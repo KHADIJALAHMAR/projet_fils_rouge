@@ -2,7 +2,7 @@
 
 <body>
 <nav class="navbar navbar-expand-md bg-nav navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">Yo pharma</a>
+  <a class="navbar-brand" href="#">YOPHARMA</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -26,21 +26,36 @@ align-items: center;
 /* landing page css */
 /* navbar */
 /* ###########################################################################*/
+/* general */
+.content{
+    max-width: 1128px;
+    margin:auto;
+}
+/* paddings */
+.pading-p{
+    padding:30px ;
+}
 /* background colors */
 .bg-nav{
-    background: rgba(212, 14, 14, 0.4) !important;
+    background: #363636!important;
 }
 .bg-second{
     background-color: #363636;
 }
-/* style */
+/* style  header*/
 .hero-header{
     height: 750px;
 }
 .wave{
     bottom: 0;
 }
-
-body{
-    background-color: darksalmon !important;
+.div-parent{
+    background-color: floralwhite;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.div-child1{
+    min-width: 445px;
 }

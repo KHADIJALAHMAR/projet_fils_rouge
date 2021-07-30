@@ -38,6 +38,15 @@ main{
 .content-p{
     padding:50px ;
 }
+
+.btn{
+    border-radius: 25px;
+    background-color:#D0D0D0;
+    color: white;
+    display: grid;
+    place-items: center;
+    width:200px;
+}
 /* border raduis */
 .br-50{
     border-radius: 50%;
@@ -95,5 +104,4 @@ main{
     display: grid;
     place-items: center;
     width:200px;
-
 }

@@ -21,7 +21,7 @@
     </div>
 </div>
 <!-- what we do? title -->
-<h1 class="content" style="color:#42B130">What we do ? </h1>
+<h1 class="content  d-flex justify-content-center" style="color:#42B130">What we do ? </h1>
 <!-- what we do? cards -->
 <div class="content content-p d-flex flex-wrap justify-content-center">
     <div class="pharma-card my-3" >
@@ -47,7 +47,44 @@
     </div>
 </div>
 </div>
-
+<!--  title  -->
+<h1 class="content  d-flex justify-content-center" style="color:#42B130">Our pharmacies </h1>
+<!-- affiche pharmacie -->
+<div>
+    <div class="section-pahrmacie div-parent ">
+        <div class="content-p pharma-list">
+            <div>
+                <h1>Pharmacie Essada</h1>
+                <p>6, av AlAhram YOUSSOUFIA</p>
+            </div>
+            <div>
+                <h1>Pharmacie Inas</h1>
+                <p>11, bd Damas , q. Salam Youssoufia YOUSSOUFIA</p>
+            </div>
+            <div>
+                <h1>Pharmacie Kachkat</h1>
+                <p>9, Rue Imam Malik , 46300 YOUSSOUFIA</p>
+            </div>
+        </div>
+        <!-- img list pharma -->
+        <img  class="img-list" src="<?php echo URLROOT; ?>/assets/img/imgpharma.png" alt="imgheader">
+    </div>
+</div>
+<!--  title map  -->
+<h1 class="content  d-flex justify-content-center" style="color:#42B130">pharmacies map </h1>
+<!-- maps -->
+<div class="content div-parent">
+    <form  action="">
+        <label for="">choose a city:</label>
+            <select class="btn" id="cars" name="role">
+                <option  class="btn">Youssoufia</option>
+                <option >Safi</option>
+            </select>
+    </form>
+    <div class="content-p">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26997.194401108867!2d-8.537137174499659!3d32.24060811238484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPharmacy!5e0!3m2!1sen!2sma!4v1627231040234!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
 </main>
 </body>
    

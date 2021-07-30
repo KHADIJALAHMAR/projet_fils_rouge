@@ -27,17 +27,27 @@ align-items: center;
 /* navbar */
 /* ###########################################################################*/
 /* general */
+main{
+    background-color: #E8E4E6;
+}
 .content{
     max-width: 1128px;
     margin:auto;
 }
 /* paddings */
-.pading-p{
-    padding:30px ;
+.content-p{
+    padding:50px ;
+}
+/* border raduis */
+.br-50{
+    border-radius: 50%;
 }
 /* background colors */
 .bg-nav{
     background: #363636!important;
+}
+.bg-prime{
+    background-color: #42B130;
 }
 .bg-second{
     background-color: #363636;
@@ -50,7 +60,6 @@ align-items: center;
     bottom: 0;
 }
 .div-parent{
-    background-color: floralwhite;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -58,4 +67,33 @@ align-items: center;
 }
 .div-child1{
     min-width: 445px;
+    color: white;
+}
+/* icons */
+.icon-g{
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    padding: 1%;
+    margin: 0 auto;
+}
+/* card */
+.pharma-card{
+    width: calc((100% / 3) - (2% * 2));
+    margin: 0 2%;
+    height: 250px;
+    min-width: 235px;
+    border: solid 3px;
+    background-color: white;
+    border-radius: 25px;
+}
+.btn-card{
+    border-radius: 25px;
+    background: #42B130;
+    color: white;
+    display: grid;
+    place-items: center;
+    width:200px;
+
 }

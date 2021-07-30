@@ -9,7 +9,7 @@
   <div id="navb" class="navbar-collapse collapse hide">
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#"><span class="fas fa-user"></span> Sign Up</a>
+        <a class="nav-link" href="#"><span class="fas fa-user" style="color:#42B130"></span> Sign Up</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>

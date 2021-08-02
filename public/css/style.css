@@ -8,8 +8,8 @@
 #wow{
     width: 220px;
 
-     } */
-/* login form */
+} 
+/*login form */
 /* .row{
     background-color: white;
     border-radius: 30px;
@@ -22,7 +22,7 @@ section{
 display: flex;
 justify-content: center;
 align-items: center;
-} */
+} */ */
 /* landing page css */
 /* navbar */
 /* ###########################################################################*/
@@ -104,4 +104,55 @@ main{
     display: grid;
     place-items: center;
     width:200px;
+}
+/* css  singup */
+.parent-sn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid ;
+    background-color: darksalmon;
+    width: 40%;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    height: 100px;
+    /* top:50%;
+    left:60%;
+    justify-content: center; */
+}
+/* part signup  login */
+.formcontainer {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.cardform {
+    background-color:#363636;
+    width: 50%;
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 20px #363636;
+    border-radius: 40px;
+}
+.signupform{
+    display: flex;
+    flex-direction: column;
+}
+.style-input{
+    background: #666666;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
 }

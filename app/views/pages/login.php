@@ -21,7 +21,7 @@
 </head>
 <body>
 <!------ Include the above in your HEAD tag ---------->
-<section>
+<!-- <section>
     <div class="container">
         <div class="row pt-5">
             <div class="col-lg-5 texte-center py-5
@@ -63,16 +63,35 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<div class=" d-flex formcontainer">
+    <div class="login-child1">
+        <h1>An easy way to be healtful</h1>
+        <p>we are YO PHARMA</p>
+        <p>we are the future of your health❤.</p>
+    </div>
+    <div class="">
+        <form class="d-grid" action="<?php echo URLROOT; ?>/ControllerCompte/select" method="POST">
+                            <label for="">Email</label>
+                            <input type="text" name="email">
+                            <label for="">password</label>
+                            <input type="text" name="password">
+                            <a href="<?php echo URLROOT; ?>/ControllerCompte/insert">signup</a>
+                            <input type="submit" name="submit">  
+        </form>
+    </div>
+</div>
  
 
 
 
 </body>
 </html>
+
 <!-- <label for="">Email</label>
                             <input type="text" name="email">
                             <label for="">password</label>
                             <input type="text" name="password">
                             <a href="<?php echo URLROOT; ?>/ControllerCompte/insert">signup</a>
-                            <input type="submit" name="submit">   -->
+                            <input type="submit" name="submit">  
+                             -->

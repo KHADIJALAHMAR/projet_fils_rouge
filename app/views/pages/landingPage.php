@@ -90,6 +90,5 @@
 </div>
 </main>
 </body>
-   
 
 <?php include_once APPROOT . '/views/inc/footer.php'; ?>

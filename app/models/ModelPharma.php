@@ -16,10 +16,9 @@ public function add($data){
     $this->db->bind(':localisation', $data['localisation']);
     $this->db->bind(':image', $data['image']);
     $this->db->bind(':phone', $data['phone']);
-    $exucute_data=$this->db->execute();
+      $exucute_data=$this->db->execute();
     return $exucute_data;
-    if($exucute_data)
-    {
+    if($exucute_data){
         echo "insert  exist";
     }else{
         echo"insert does not exist";

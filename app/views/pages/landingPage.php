@@ -24,26 +24,29 @@
 <h1 class="content  d-flex justify-content-center" style="color:#42B130">What we do ? </h1>
 <!-- what we do? cards -->
 <div class="content content-p d-flex flex-wrap justify-content-center">
-    <div class="pharma-card my-3" >
+    <div class="pharma-card my-3 position-relative p-3" >
         <div class="br-50 bg-prime icon-g"><img src="<?php echo URLROOT; ?>/assets/icons/medicine.svg" alt="icon" style="width:70%;height:70%;"></div>
         <div class="content-card">
-            <h4>easy to search for meds</h4>
-            <p> help you search for the existance of a specific medicament in ourpharmacies.</p>
-            <button class="btn-card">let's start !</button>
+            <h4 class="text-center">easy to search for meds</h4>
+            <p class="text-center"> help you search for the existance of a specific medicament in ourpharmacies.</p>
         </div>
-        
+        <button class="btn-card-lp">let's start !</button>
     </div>
-    <div class="pharma-card my-3" >
+    <div class="pharma-card my-3 position-relative p-3" >
         <div class="br-50 bg-prime icon-g"><img src="<?php echo URLROOT; ?>/assets/icons/pharmacy.svg" alt="icon" style="width:70%;height:70%;"></div>
-        <h4>gard pharmacies</h4>
-        <p>we help you know the available gard pharmaciesevery day.</p>
-        <button class="btn-card">let's start !</button>
+        <div class="content-card">
+        <h4 class="text-center">gard pharmacies</h4>
+        <p class="text-center">we help you know the available gard pharmaciesevery day.</p>
+        </div>
+        <button class="btn-card-lp">let's start !</button>
     </div>
-    <div class="pharma-card my-3" >
+    <div class="pharma-card my-3  position-relative p-3" >
     <div class="br-50 bg-prime icon-g"><img src="<?php echo URLROOT; ?>/assets/icons/pin.svg" alt="icon" style="width:70%;height:70%;"></div>
-        <h4>access to locations</h4>
-        <p>we give the exact location of our pharmacies so that youcan easily find them.</p>
-        <button class="btn-card">let's start !</button>
+    <div class="content-card">
+        <h4 class="text-center">access to locations</h4>
+        <p class="text-center">we give the exact location of our pharmacies so that youcan easily find them.</p>
+        </div>
+        <button class="btn-card-lp">let's start !</button>
     </div>
 </div>
 </div>

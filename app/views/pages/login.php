@@ -64,20 +64,20 @@
         </div>
     </div>
 </section> -->
-<div class=" d-flex formcontainer">
+<div class=" d-flex justify-content-around formcontainer">
     <div class="login-child1">
         <h1>An easy way to be healtful</h1>
         <p>we are YO PHARMA</p>
         <p>we are the future of your health❤.</p>
     </div>
-    <div class="">
+    <div class="card-login">
         <form class="d-grid" action="<?php echo URLROOT; ?>/ControllerCompte/select" method="POST">
-                            <label for="">Email</label>
-                            <input type="text" name="email">
-                            <label for="">password</label>
-                            <input type="text" name="password">
-                            <a href="<?php echo URLROOT; ?>/ControllerCompte/insert">signup</a>
-                            <input type="submit" name="submit">  
+        <h1 style="color:#E8E4E6">Welcome back !</h1>
+        <p style="color:#42B130">we are happy to see you again</p>
+                            <input  class="style-input"type="text" name="email" placeholder="Email">
+                            <input   class="style-input" type="text" name="password" placeholder="password">
+                            <input  class="btn-card"type="submit" name="submit"> 
+                            <p>You don't have an account?<span style="color:#42B130"><a href="<?php echo URLROOT; ?>/ControllerCompte/insert">Create an account</a></span></p>
         </form>
     </div>
 </div>

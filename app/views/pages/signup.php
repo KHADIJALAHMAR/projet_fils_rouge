@@ -12,6 +12,7 @@
     <div class="formcontainer">
         <div class="cardform">
         <form  class="signupform " action="<?php echo URLROOT; ?>/ControllerCompte/insert" method="POST">
+        <h1>Create account</h1>
         <input   class="style-input" type="text" name="name" placeholder="name" >
         <input  class="style-input" type="text" name="lname"  placeholder="lname">
         <input  class="style-input" type="text" name="email"  placeholder="email">
@@ -23,7 +24,7 @@
 </select>
 
 <input  class="btn-card"type="submit" name="submit" />
-<p style="color:#E8E4E6">You already have an account? <span style="color:#42B130">Login</span></p>
+<p style="color:#E8E4E6">You already have an account? <span style="color:#42B130"><a>Login</a></span></p>
         </form>
         </div>
     </div>

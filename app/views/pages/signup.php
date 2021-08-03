@@ -19,30 +19,14 @@
         <input  class="style-input" type="text" name="password"  placeholder="password">
         <label  style="color:#E8E4E6" for="cars" name="role">Choose a car:</label>
 <select class="style-input" id="cars" name="role">
-  <option > client </option
+  <option > client </option>
   <option> pharmasy </option>
 </select>
 
-<input  class="btn-card"type="submit" name="submit" />
+<input  class="btn-card" type="submit" name="submit"  />
 <p style="color:#E8E4E6">You already have an account? <span style="color:#42B130"><a>Login</a></span></p>
         </form>
         </div>
     </div>
 </body>
 </html>
-<!-- <form   action="<?php echo URLROOT; ?>/ControllerCompte/insert" method="POST">
-        <label for="">name</label>
-        <input type="text" name="name" >
-        <label for="">lname</label>
-        <input type="text" name="lname">
-        <label for="">Email</label>
-        <input type="text" name="email">
-        <label for="">password</label>
-        <input type="text" name="password">
-        <label for="cars" name="role">Choose a car:</label>
-<select id="cars" name="role">
-  <option  >client</option>
-  <option >pharmasy</option></option>
-</select>
-        <input type="submit" name="submit">
-    </form> -->

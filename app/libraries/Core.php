@@ -5,7 +5,7 @@
    * URL FORMAT - /controller/method/params
    */
   class Core {
-    protected $currentController = 'ControllerLandingPage';
+    protected $currentController = 'ControllerPharma';
     protected $currentMethod = 'index';
     protected $params = [];
 

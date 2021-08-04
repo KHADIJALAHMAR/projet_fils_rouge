@@ -38,12 +38,12 @@ public function signup($data)
 }
 public function findUser($email)
     {
-        $this->database->query('SELECT * FROM users WHERE email = :email');
-        $this->database->bind(':email', $email);
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+        $this->db->bind(':email', $email);
 
-        $row = $this->database->single();
+        $row = $this->db->single();
 
-        if ($this->database->rowCount() > 0) {
+        if ($this->db->rowCount() > 0) {
             return true;
         }
         else {

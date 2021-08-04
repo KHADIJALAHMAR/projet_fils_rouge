@@ -2,6 +2,7 @@
   class ControllerCompte extends Controller {
     public function __construct(){
         $this->model= $this->model('ModelCompte');
+        $this->Session = session;
 
     }
 
@@ -21,59 +22,72 @@
         // validation
         if (empty($data['email'])) {
           echo "please enter your email";
-      }else{
+      }
+       //validation password
+       if (empty($data['password'])) {
+        echo "please enter your password";
+    }
+    elseif (strlen($data['password']) < 5) {
+        echo "password must be at least 5 characters";
+    }
+    if ($this->model->signup($data)) {
+
+      $this->view('pages/login');
+     }
         // check if email already exists
         if($this->model->findUser('email')){
           echo "email already taken";
         }
+        else{
+          $this->view('pages/signup');
+        }
+
       }
-if ($this->model->signup($data)) {
-
- $this->view('pages/login');
 }
-      else{
-        $this->view('pages/signup');
-      }
-        
-        
+  public function select()
+    {
+
+        $this->Session->startSession();
+
+        // if (isset($_SESSION['email'])) {
+
+        //     header('location:' . URLROOT . '/ProfilController/pageProfil');
+        // }
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            $data = [
+                'Email' => $_POST['email'],
+                'passW' => $_POST['password']
+            ];
+            //validation email
+            if (empty($data['email'])) {
+                echo "please enter your email";
+            }
+            //validation password
+            if (empty($data['password'])) {
+                echo "please enter your password";
+            }
+            //check for email et password
+            if ($user =$this->model->login($data['email'],$data['password'])) {
+
+                $this->Session->setSession('id_user',$user->userId);
+                $this->Session->setSession('username',$user->username);
+
+                ////////
+                header('location:' . URLROOT . '/ControllerCompte/index');
+                ///////
+
+            }
+            else {
+                echo "please enter a valid email";
+            }
+
+        }
+        else {
+            $this->view('pages/Login');
+        }
     }
-
-}
- public function select(){
-     if(isset($_POST['submit'])){
-      $email= $_POST['email'];
-      $password= $_POST['password'];
-       //validation email
-       if (empty($data['email'])) {
-        echo "please enter your email";
-    }
-     //validation password
-     if (empty($data['password'])) {
-      echo "please enter your password";
-  }
-  elseif (strlen($data['password']) < 5) {
-      echo "password must be at least 5 characters";
-  }
-
-  if ($this->model->signup($data)) {
-
-      redirect('ControllerCompte/login');
-  }
-  else {
-      $this->view('pages/Signup');
-  }
-
-}
-else {
-  $this->view('pages/Signup');
-}
-
-  $result = $this->model->login($email,$password);
-  if($result){
-   $this->view('pages/index');
-  }
-  }else{
-    $this->view('pages/login');
-  }
-
   }

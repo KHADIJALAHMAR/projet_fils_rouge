@@ -16,11 +16,11 @@
         <input   class="style-input" type="text" name="name" placeholder="name" >
         <input  class="style-input" type="text" name="lname"  placeholder="lname">
         <input  class="style-input" type="text" name="email"  placeholder="email">
-        <input  class="style-input" type="text" name="password"  placeholder="password">
+        <input  class="style-input" type="password" name="password"  placeholder="password">
         <label  style="color:#E8E4E6" for="cars" name="role">Choose a car:</label>
 <select class="style-input" id="cars" name="role">
-  <option > client </option>
-  <option> pharmasy </option>
+  <option > pharmasict </option>
+  <option> Admin </option>
 </select>
 
 <input  class="btn-card" type="submit" name="submit"  />

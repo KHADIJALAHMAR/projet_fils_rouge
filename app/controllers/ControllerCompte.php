@@ -24,10 +24,10 @@
           echo "please enter your email";
       }
        //validation password
-       if (empty($data['password'])) {
-        echo "please enter your password";
+       if (empty($data['pass_word'])) {
+        echo "please enter your pass_word";
     }
-    elseif (strlen($data['password']) < 5) {
+    elseif (strlen($data['pass_word']) < 5) {
         echo "password must be at least 5 characters";
     }
     if ($this->model->signup($data)) {
@@ -59,19 +59,19 @@
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data = [
-                'Email' => $_POST['email'],
-                'passW' => $_POST['password']
+                'email' => $_POST['email'],
+                'pass_word' => $_POST['password']
             ];
             //validation email
             if (empty($data['email'])) {
                 echo "please enter your email";
             }
             //validation password
-            if (empty($data['password'])) {
+            if (empty($data['pass_word'])) {
                 echo "please enter your password";
             }
             //check for email et password
-            if ($user =$this->model->login($data['email'],$data['password'])) {
+            if ($user =$this->model->login($data['email'],$data['pass_word'])) {
 
                 $this->Session->setSession('id_user',$user->userId);
                 $this->Session->setSession('username',$user->username);

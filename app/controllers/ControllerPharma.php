@@ -34,6 +34,19 @@ class ControllerPharma extends Controller{
     
       $this->view('pages/insert');
     }
+    public function uploadPhoto($image)
+{    
+  $dir = "C:\\xampp\htdocs\\projet_fils_rouge\public\img";    
+ //  $time = time();   
+   $name = str_replace(' ','-',strtolower($_FILES["image"]["name"]));    
+   $type = $_FILES["image"]["type"];       
+   if(move_uploaded_file($_FILES["image"]["tmp_name"],$dir."/".$name))
+   {       
+      return true;    }
+   else{      
+     return false;   
+    }   
+  }
 
 
 }

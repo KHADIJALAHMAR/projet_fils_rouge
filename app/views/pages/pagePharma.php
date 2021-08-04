@@ -23,7 +23,20 @@
 </div>
 <!-- button -->
 <button>Ajouter</button>
+<!-- crd tous pharma -->
+<div class="content-p">
+<div class="card content " style="width: 18rem;">
+    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="card-link">Localisation</a>
+    <p class="card-text">Numéro de téléphone</p>
 
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+<!-- maps -->
 
 
 

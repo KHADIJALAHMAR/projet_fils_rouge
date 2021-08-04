@@ -4,7 +4,8 @@ class ControllerPharma extends Controller{
         $this->model= $this->model('ModelPharma');
     }
     public function index(){
-        $this->view('pages/pagePharma');
+        $result = $this->model->show();
+        $this->view('pages/pagePharma',$result);
     }
 
 

@@ -18,9 +18,15 @@
             'pass_word'=>$_POST['password'],
             'role'=>$_POST['role'],
         ];
-
-        
-
+        // validation
+        if (empty($data['email'])) {
+          echo "please enter your email";
+      }else{
+        // check if email already exists
+        if($this->model->findUser('email')){
+          echo "email already taken";
+        }
+      }
 if ($this->model->signup($data)) {
 
  $this->view('pages/login');
@@ -33,7 +39,7 @@ if ($this->model->signup($data)) {
     }
 
 }
-public function select(){
+ public function select(){
      if(isset($_POST['submit'])){
       $email= $_POST['email'];
       $password= $_POST['password'];
@@ -41,11 +47,27 @@ public function select(){
        if (empty($data['email'])) {
         echo "please enter your email";
     }
-      //validation password
-      if (empty($data['password'])) {
-        echo "please enter your password";
-    }
-    
+     //validation password
+     if (empty($data['password'])) {
+      echo "please enter your password";
+  }
+  elseif (strlen($data['password']) < 5) {
+      echo "password must be at least 5 characters";
+  }
+
+  if ($this->model->signup($data)) {
+
+      redirect('ControllerCompte/login');
+  }
+  else {
+      $this->view('pages/Signup');
+  }
+
+}
+else {
+  $this->view('pages/Signup');
+}
+
   $result = $this->model->login($email,$password);
   if($result){
    $this->view('pages/index');
@@ -55,4 +77,3 @@ public function select(){
   }
 
   }
-}

@@ -36,5 +36,20 @@ public function signup($data)
         echo"insert does not exist";
     }
 }
+public function findUser($email)
+    {
+        $this->database->query('SELECT * FROM users WHERE email = :email');
+        $this->database->bind(':email', $email);
+
+        $row = $this->database->single();
+
+        if ($this->database->rowCount() > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
 
 }  

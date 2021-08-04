@@ -21,13 +21,12 @@ class ControllerPharma extends Controller{
      'localisation' => $_POST['localisation'],
      'phone'=>$_POST['phone'],
      'image' => $_FILES['image']['name'],
-     
+
       ];
       if($this->uploadPhoto($image)===true){
        if( $this->model->add($data) ){
          
          header('location:'.URLROOT .'/ControllerPharma/index');
-         
       } else{
          die('Something went wrong');
       }
@@ -66,4 +65,8 @@ class ControllerPharma extends Controller{
     ];
     $this->view('pages/pagePharma',$data);
   }
+
+
+
+
 }

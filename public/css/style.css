@@ -189,6 +189,8 @@ body{
 .child-1{
     height: 40px;
     background-color:#42B130;
+    color:#E8E4E6;
+  
 }
 .child-2{
     width: 0;
@@ -200,5 +202,8 @@ body{
 }
 .parent-pharma{
     float:left ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*  */

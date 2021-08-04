@@ -2,7 +2,7 @@
 <!-- flèche pharmacie de gard -->
 <div class="parent-pharma row content-p  ">
 <div class="child-1 ">
-    <p style="color:#E8E4E6">Gard pharmacies</p>
+    <p class="ml-2 mt-1">Gard pharmacies</p>
 </div>
     <div class="child-2 ">
 
@@ -11,7 +11,7 @@
 <!-- pharma gard -->
 <div class="content-p">
 <div class="card content " style="width: 18rem;">
-    <img src="" class="card-img-top" alt="img">
+    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
     <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <a href="#" class="card-link">Localisation</a>
@@ -21,6 +21,11 @@
   </div>
 </div>
 </div>
+<!-- button -->
+<button>Ajouter</button>
+
+
+
 
 
 

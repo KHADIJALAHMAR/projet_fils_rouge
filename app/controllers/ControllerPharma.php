@@ -7,6 +7,11 @@ class ControllerPharma extends Controller{
         $result = $this->model->show();
         $this->view('pages/pagePharma',$result);
     }
+
+
+
+
+
     public function insert()
     {
     if (isset($_POST["submit"])) {
@@ -34,6 +39,10 @@ class ControllerPharma extends Controller{
     
       $this->view('pages/insert');
     }
+
+
+
+
     public function uploadPhoto($image)
 {    
   $dir = "C:\\xampp\htdocs\\projet_fils_rouge\public\img";    
@@ -49,4 +58,12 @@ class ControllerPharma extends Controller{
   }
 
 
+  public function pharma(){
+    $this->session->startSession();
+    $data_pharma= $this->model->selectFK($_SESSION['id_user']);
+    $data=[
+      'pharmacie' => $data_pharma
+    ];
+    $this->view('pages/pagePharma',$data);
+  }
 }

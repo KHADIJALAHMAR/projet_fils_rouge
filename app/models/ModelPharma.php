@@ -12,7 +12,8 @@ public function show(){
     return $results;
 }
 public function add($data){
-    $this->db->query("INSERT INTO `pharmacy` ( `localisation`, `image`, `phone`) VALUES ( :localisation,:image,:phone)");
+    $this->db->query("INSERT INTO `pharmacy` ( `name_pharma`,`localisation`, `image`, `phone`) VALUES ( :name_pharma,:localisation,:image,:phone)");
+    $this->db->bind(':name_pharma', $data['name_pharma']);
     $this->db->bind(':localisation', $data['localisation']);
     $this->db->bind(':image', $data['image']);
     $this->db->bind(':phone', $data['phone']);

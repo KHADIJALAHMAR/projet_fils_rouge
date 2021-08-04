@@ -22,7 +22,9 @@
 </div>
 </div>
 <!-- button -->
+<?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
 <button>Ajouter</button>
+<?php endif; ?>
 <!-- crd tous pharma -->
 <div class="content-p">
 <div class="card content " style="width: 18rem;">
@@ -37,7 +39,6 @@
 </div>
 </div>
 <!-- maps -->
-
 
 
 

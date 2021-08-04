@@ -6,8 +6,8 @@
 <div class="position-relative bg-second hero-header">
     <div class="div-parent">
         <div class="div-child1 w-50 my-auto">
-            <div class="child-1"><h1>An easy way to be healtful</h1></div>
-            <div class="child-2"><h3>My mother has <span style="color:#42B130">PHARMA</span> eyes.</h3>
+            <div><h1>An easy way to be healtful</h1></div>
+            <div><h3>My mother has <span style="color:#42B130">PHARMA</span> eyes.</h3>
             <h3>we are the future of your health❤.</h3>
             </div>
             <div class="child-3"><button class="btn-card">get started now !</button></div>

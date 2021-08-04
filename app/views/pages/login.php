@@ -20,50 +20,7 @@
     <title>Document</title>
 </head>
 <body>
-<!------ Include the above in your HEAD tag ---------->
-<!-- <section>
-    <div class="container">
-        <div class="row pt-5">
-            <div class="col-lg-5 texte-center py-5
-            ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta molestiae architecto, maxime error exercitationem! Nam, autem deserunt, id architecto amet dolor provident totam consequatur cum perferendis dolores consequuntur sunt.
-                </p>
-            </div>
-            <div class="col-lg-7 texte-center py5">
-                <h1>Welcome back !</h1>
-                <h3>we are happy to see you again</h3>
-            <form  action="<?php echo URLROOT; ?>/ControllerCompte/select"   method="POST">
-                <div class="form-row pt-5">
-                    <div class="col-lg-10">
-                        <div class="wrap-input100 validate-input">
-                        <label for="">Email</label>
-                        <input type="text" name="email">
-                        </div>
-                    </div>
 
-                    <div class="form-row">
-                    <div class="col-lg-10">
-                        <div class="wrap-input100 validate-input">
-                        <label for="">password</label>
-                        <input type="password" name="password">
-
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                    <div class="col-lg-10">
-                        <input type="submit" name="submit" value="login">
-
-                        </div>
-                    </div>
-                    
-
-
-            </form>
-            </div>
-        </div>
-    </div>
-</section> -->
 <div class=" d-flex justify-content-around formcontainer">
     <div class="login-child1">
         <h1>An easy way to be healtful</h1>
@@ -87,11 +44,3 @@
 
 </body>
 </html>
-
-<!-- <label for="">Email</label>
-                            <input type="text" name="email">
-                            <label for="">password</label>
-                            <input type="text" name="password">
-                            <a href="<?php echo URLROOT; ?>/ControllerCompte/insert">signup</a>
-                            <input type="submit" name="submit">  
-                             -->

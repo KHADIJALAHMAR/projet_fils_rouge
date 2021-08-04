@@ -7,4 +7,5 @@ class ControllerPharma extends Controller{
         $this->view('pages/pagePharma');
     }
     
+    
 }

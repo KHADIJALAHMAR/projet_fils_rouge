@@ -24,8 +24,19 @@ public function add($data){
     }else{
         echo"insert does not exist";
     }
-
-
-
 }
+public function selectFK($id_user){
+    $this->db->query("SELECT * FROM pharmacy P, users U WHERE  P.id_user= U.id_user AND  P.id_user = :id " );
+    $this->db->bind(':id',$id_user);
+    $results = $this->db->resultSet();
+    $number_row = $this->db->rowCount();
+    if($number_row >0){
+        return $row;
+    }
+    else{
+        return false;
+    }
+    return $results;
+}
+
 }

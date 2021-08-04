@@ -35,6 +35,7 @@
     <p class="card-text">Numéro de téléphone</p>
 
     <a href="#" class="btn btn-primary">Go somewhere</a>
+    <?php var_dump($data)?>
   </div>
 </div>
 </div>

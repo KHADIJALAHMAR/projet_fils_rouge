@@ -24,8 +24,8 @@
 <div class=" d-flex justify-content-around formcontainer">
     <div class="login-child1">
         <h1>An easy way to be healtful</h1>
-        <p>we are YO PHARMA</p>
-        <p>we are the future of your health❤.</p>
+        <h3>we are YO PHARMA</h3>
+        <h3>we are the future of your health❤.</h3>
     </div>
     <div class="card-login">
         <form class="d-grid" action="<?php echo URLROOT; ?>/ControllerCompte/select" method="POST">

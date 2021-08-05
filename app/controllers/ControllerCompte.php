@@ -94,51 +94,105 @@ class ControllerCompte extends Controller
         $this->view('pages/signup', $data);
     }
   }
-  // public function select()
-  //   {
 
-  //       $this->Session->startSession();
 
-  //       // if (isset($_SESSION['email'])) {
+  public function select()
+    {
 
-  //       //     header('location:' . URLROOT . '/ProfilController/pageProfil');
-  //       // }
+        $this->Session->startSession();
 
-  //       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // if (isset($_SESSION['email'])) {
 
-  //           $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        //     header('location:' . URLROOT . '/ProfilController/pageProfil');
+        // }
 
-  //           $data = [
-  //               'email' => $_POST['email'],
-  //               'pass_word' => $_POST['password']
-  //           ];
-  //           //validation email
-  //           if (empty($data['email'])) {
-  //               echo "please enter your email";
-  //           }
-  //           //validation password
-  //           if (empty($data['pass_word'])) {
-  //               echo "please enter your password";
-  //           }
-  //           //check for email et password
-  //           if ($user =$this->model->login($data['email'],$data['pass_word'])) {
 
-  //               $this->Session->setSession('id_user',$user->userId);
-  //               $this->Session->setSession('username',$user->username);
+              // Check for POST
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          // Sanitize POST data
+          $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+          $this->Session->startSession();
+          // Init data
+          $data = [
+              'email'        => trim($_POST['email']),
+              'pass_word'     => trim($_POST['password']),
+              'email_err'    => '',
+              'pass_word_err' => '',
+          ];
+          // Validate Email
+          if (empty($data['email'])) {
+              $data['email_err'] = 'Please enter email';
+          }
+          // Validate Password
+          if (empty($data['pass_word'])) {
+              $data['pass_word_err'] = 'Please enter password';
+          }
+          // Check for user/email
+          if ($this->userModel->findUser($data['email'])) {
+              // User found
+          } else {
+              // User not found
+              $data['email_err'] = 'No user found';
+          }
+          // Make sure errors are empty
+          if (empty($data['email_err']) && empty($data['password_err'])) {
+              // Check and set logged in user
+              $user = $this->model->login($data['email'], $data['password']);
+              if ($user) {
+                  // Create Session
+                  $this->Session->setSession('user_id',$user->userId);
+                  $this->Session->setSession('username',$user->username);
+  
+              } else {
+                  $data['pass_word_err'] = 'Password incorrect';
+                  $this->view('pages/login', $data);
+              }
+          } else {
+              // Load view with errors
+              $this->view('pages/login', $data);
+          }
+      } else {
+          // Init data
+          $data = [
+              'email'        => '',
+              'password'     => '',
+              'email_err'    => '',
+              'pass_word_err' => '',
+          ];
+          // Load view
+          $this->view('pages/login', $data);
+      }
+  }
 
-  //               ////////
-  //               header('location:' . URLROOT . '/ControllerCompte/index');
-  //               ///////
 
-  //           }
-  //           else {
-  //               echo "please enter a valid email";
-  //           }
 
-  //       }
-  //       else {
-  //           $this->view('pages/Login');
-  //       }
-  //   }
-}
+
+
+
+
+
+
+
+            
+            //check for email et password
+        //     if ($user =$this->model->login($data['email'],$data['pass_word'])) {
+
+        //         $this->Session->setSession('id_user',$user->userId);
+        //         $this->Session->setSession('username',$user->username);
+
+        //         ////////
+        //         header('location:' . URLROOT . '/ControllerCompte/index');
+        //         ///////
+
+        //     }
+        //     else {
+        //         echo "please enter a valid email";
+        //     }
+
+        // }
+        // else {
+        //     $this->view('pages/Login');
+        // }
+    }
+    ###########################################################
   ################################################################"

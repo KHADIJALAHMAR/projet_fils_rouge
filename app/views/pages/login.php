@@ -29,12 +29,12 @@
     </div>
     <div class="card-login">
         <form class="d-grid" action="<?php echo URLROOT; ?>/ControllerCompte/select" method="POST">
-        <h1 style="color:#E8E4E6">Welcome back !</h1>
-        <p style="color:#42B130">we are happy to see you again</p>
-                            <input  class="style-input"type="text" name="email" placeholder="Email">
-                            <input   class="style-input" type="text" name="password" placeholder="password">
-                            <input  class="btn-card"type="submit" name="submit"> 
-                            <p>You don't have an account?<span style="color:#42B130"><a href="<?php echo URLROOT; ?>/ControllerCompte/insert">Create an account</a></span></p>
+            <h1 style="color:#E8E4E6">Welcome back !</h1>
+            <p style="color:#42B130">we are happy to see you again</p>
+              <input  class="style-input"type="text" name="email" placeholder="Email">
+              <input   class="style-input" type="text" name="password" placeholder="password">
+              <input  class="btn-card"type="submit" name="submit"> 
+              <p>You don't have an account?<span style="color:#42B130"><a href="<?php echo URLROOT; ?>/ControllerCompte/insert">Create an account</a></span></p>
         </form>
     </div>
 </div>

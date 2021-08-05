@@ -128,7 +128,7 @@ class ControllerCompte extends Controller
               $data['pass_word_err'] = 'Please enter password';
           }
           // Check for user/email
-          if ($this->userModel->findUser($data['email'])) {
+          if ($this->model->findUser($data['email'])) {
               // User found
           } else {
               // User not found
@@ -137,11 +137,11 @@ class ControllerCompte extends Controller
           // Make sure errors are empty
           if (empty($data['email_err']) && empty($data['password_err'])) {
               // Check and set logged in user
-              $user = $this->model->login($data['email'], $data['password']);
+              $user = $this->model->login($data['email'], $data['pass_word']);
               if ($user) {
                   // Create Session
-                  $this->Session->setSession('user_id',$user->userId);
-                  $this->Session->setSession('username',$user->username);
+                  $this->Session->setSession('id_user',$user->userId);
+                  $this->Session->setSession('fname',$user->username);
   
               } else {
                   $data['pass_word_err'] = 'Password incorrect';

@@ -12,7 +12,7 @@
         <a class="nav-link" href="<?php echo URLROOT; ?>/ControllerCompte/insert"><span class="fas fa-user" style="color:#42B130" ></span> Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>
+        <a class="nav-link" href="<?php echo URLROOT; ?>/ControllerCompte/select"><span class="fas fa-sign-in-alt"></span> Login</a>
       </li>
     </ul>
   </div>

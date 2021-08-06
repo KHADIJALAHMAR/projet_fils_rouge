@@ -9,7 +9,7 @@
   <div id="navb" class="navbar-collapse collapse hide">
     <ul class="nav navbar-nav ml-auto <?= isset($_SESSION['role']) ? 'd-none' : 'd-block' ?>">
       <li class="nav-item">
-        <a class="nav-link" href="#"><span class="fas fa-user" style="color:#42B130"></span> Sign Up</a>
+        <a class="nav-link" href="<?php echo URLROOT; ?>/ControllerCompte/insert"><span class="fas fa-user" style="color:#42B130" ></span> Sign Up</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>

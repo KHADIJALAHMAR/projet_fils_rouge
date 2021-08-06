@@ -179,4 +179,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*  */
+/* profil */
+.div-main{
+    margin-top:20px;
+    background:#f8f8f8
+}

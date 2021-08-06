@@ -92,7 +92,8 @@ class ControllerCompte extends Controller
         ];
         // Load view
         $this->view('pages/signup', $data);
-    }
+        
+    }  $this->view('pages/signup');
   }
 
 

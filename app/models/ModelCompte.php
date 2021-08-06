@@ -6,10 +6,12 @@ class ModelCompte
     public function __construct(){
         $this->db = new Database;
 }  
-public function login($email,$password){
-    $this->db->query("SELECT * FROM `users`  WHERE email=:email AND pass_word=:pass_word" );
+public function login($email,$password,$fname){
+    $this->db->query("SELECT * FROM `users`  WHERE email=:email AND pass_word=:pass_word AND fname=:fname" );
     $this->db->bind(':email', $email);
     $this->db->bind(':pass_word', $password);
+    $this->db->bind(':fname', $fname);
+
     $results = $this->db->single();
 
     return $results;

@@ -116,8 +116,10 @@ class ControllerCompte extends Controller
           $data = [
               'email'        => trim($_POST['email']),
               'pass_word'     => trim($_POST['password']),
+              'fname'     => trim($_POST['fname']),
               'email_err'    => '',
               'pass_word_err' => '',
+              'fname_err'    => '',
           ];
           // Validate Email
           if (empty($data['email'])) {
@@ -127,6 +129,10 @@ class ControllerCompte extends Controller
           if (empty($data['pass_word'])) {
               $data['pass_word_err'] = 'Please enter password';
           }
+           // Validate fname
+          if (empty($data['fname'])) {
+            $data['fname_err'] = 'Please enter email';
+        }
           // Check for user/email
           if ($this->model->findUser($data['email'])) {
               // User found
@@ -135,13 +141,13 @@ class ControllerCompte extends Controller
               $data['email_err'] = 'No user found';
           }
           // Make sure errors are empty
-          if (empty($data['email_err']) && empty($data['password_err'])) {
+          if (empty($data['email_err']) && empty($data['password_err']) && empty($data['fname_err'])) {
               // Check and set logged in user
-              $user = $this->model->login($data['email'], $data['pass_word']);
+              $user = $this->model->login($data['email'], $data['pass_word'],$data['fname']);
               if ($user) {
                   // Create Session
-                  $this->Session->setSession('id_user',$user->userId);
-                  $this->Session->setSession('fname',$user->username);
+                  $this->Session->setSession('id_user',$user->email);
+                  $this->Session->setSession('fname',$user->pass_word);
   
               } else {
                   $data['pass_word_err'] = 'Password incorrect';
@@ -194,5 +200,3 @@ class ControllerCompte extends Controller
         //     $this->view('pages/Login');
         // }
     }
-    ###########################################################
-  ################################################################"

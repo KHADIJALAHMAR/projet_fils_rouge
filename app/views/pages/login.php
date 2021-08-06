@@ -34,6 +34,7 @@
               <input  class="style-input"type="text" name="email" placeholder="Email"
                <?php echo (!empty($data['email_err'])) ? 'is-invalid' : '' ?> value="<?php echo $data['email'] ?? '' ?>">
                <span style="color:#E8E4E6"><?php echo $data['email_err'] ?? '' ?></span>
+               <input type="text" name="fname">
               <input   class="style-input" type="text" name="password" placeholder="password" <?php echo (!empty($data['pass_word_err'])) ? 'is-invalid' : '' ?> value="<?php echo $data['pass_word'] ?? '' ?>">
               <span style="color:#E8E4E6"><?php echo $data['pass_word_err'] ?? '' ?></span>
               <input  class="btn-card"type="submit" name="submit"> 

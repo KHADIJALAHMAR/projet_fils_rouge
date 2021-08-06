@@ -37,7 +37,7 @@
             </div>
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Recent photos</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    <h5 class="mb-0">Post</h5><a href="#" class="btn btn-link text-muted">Show all</a>
                 </div>
                 <div class="row">
                 <div class="profile-info col-md-9">

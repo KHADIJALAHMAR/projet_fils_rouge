@@ -7,6 +7,7 @@ class ControllerPharma extends Controller{
     }
     public function index(){
         $result = $this->modelpharma->show();
+        
         $this->view('pages/pagePharma',$result);
     }
 
@@ -87,6 +88,7 @@ if (!isset($_SESSION['id_user'])) {
     $result = $this->modelpharma->get_pharma($id_user);
     $this->view('pages/pharmacist/profile',$result);
   }
+
 
 
   // public function pharma(){

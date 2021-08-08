@@ -142,8 +142,15 @@ class ControllerCompte extends Controller
                   $this->Session->setSession('id_user',$user->id_user);
                   $this->Session->setSession('email',$user->email);
                   $this->Session->setSession('fname',$user->fname);
-                  $this->view('pages/pharmacist/profile');
-  
+                  $this->Session->setSession('role',$user->role);
+
+                  if ($this->Session->getSession('role') == 'pharmacist') {
+                    header('location:' . URLROOT . '/ControllerPharma/index');
+                  // }elseif ($this->Session->getSession('role') == 'Admin') {
+                  //   header('location:' . URLROOT . '/ControllerPharma/index');
+                  }
+                  
+
               } else {
                   $data['pass_word_err'] = 'Password incorrect';
                   $this->view('pages/login', $data);
@@ -164,6 +171,8 @@ class ControllerCompte extends Controller
           // Load view
           $this->view('pages/login', $data);
       }
+
+    
   }
 
 

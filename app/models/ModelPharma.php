@@ -7,9 +7,8 @@ class ModelPharma
         $this->db = new Database;
 }
 public function show(){
-    $this->db->query("SELECT * FROM `pharmacy` " );
-    $results = $this->db->single();
-    return $results;
+    $this->db->query("SELECT * FROM `pharmacy`" );
+    return $this->db->resultSet();
 }
 public function getFk ($id_user){
     

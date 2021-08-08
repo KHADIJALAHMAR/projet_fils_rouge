@@ -9,7 +9,7 @@ class ControllerCompte extends Controller
 
   public function index()
   {
-    $this->view('pages/pharmacist/profile');
+    $this->view('pages/Landingpage');
   }
   public function insert()
   {
@@ -31,11 +31,11 @@ class ControllerCompte extends Controller
       // validation
       if (empty($data['email'])) {
         $data['email_err'] = 'Please enter email';
-      } else {
+      } 
         // Check email
         if ($this->model->findUser($data['email'])) {
           $data['email_err'] = 'Email already taken';
-        }
+        
       }
 
 
@@ -63,8 +63,7 @@ class ControllerCompte extends Controller
 
       // check input is not empty
       if (empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err'])) {
-        // Hash Password
-        // $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
         // Register User
         if ($this->model->signup($data)) {
           // Notify before redirect
@@ -125,35 +124,30 @@ class ControllerCompte extends Controller
           // Validate Email
           if (empty($data['email'])) {
               $data['email_err'] = 'Please enter email';
-          }
+          } 
           // Validate Password
           if (empty($data['pass_word'])) {
               $data['pass_word_err'] = 'Please enter password';
           }
            // Validate fname
           if (empty($data['fname'])) {
-            $data['fname_err'] = 'Please enter email';
-        }
-          // Check for user/email
-          if ($this->model->findUser($data['email'])) {
-              // User found
-          } else {
-              // User not found
-              $data['email_err'] = 'No user found';
-          }
+            $data['fname_err'] = 'Please enter Fname';
+        } 
           // Make sure errors are empty
           if (empty($data['email_err']) && empty($data['password_err']) && empty($data['fname_err'])) {
               // Check and set logged in user
               $user = $this->model->login($data['email'], $data['pass_word'],$data['fname']);
               if ($user) {
                   // Create Session
-                  $this->Session->setSession('id_user',$user->email);
-                  $this->Session->setSession('fname',$user->pass_word);
+                  $this->Session->setSession('email',$user->email);
+                  $this->Session->setSession('fname',$user->fname);
+                  $this->view('pages/pharmacist/profile');
   
               } else {
                   $data['pass_word_err'] = 'Password incorrect';
                   $this->view('pages/login', $data);
               }
+              
           } else {
               // Load view with errors
               $this->view('pages/login', $data);
@@ -175,29 +169,4 @@ class ControllerCompte extends Controller
 
 
 
-
-
-
-
-
-            
-            //check for email et password
-        //     if ($user =$this->model->login($data['email'],$data['pass_word'])) {
-
-        //         $this->Session->setSession('id_user',$user->userId);
-        //         $this->Session->setSession('username',$user->username);
-
-        //         ////////
-        //         header('location:' . URLROOT . '/ControllerCompte/index');
-        //         ///////
-
-        //     }
-        //     else {
-        //         echo "please enter a valid email";
-        //     }
-
-        // }
-        // else {
-        //     $this->view('pages/Login');
-        // }
     }

@@ -1,10 +1,12 @@
 <?php
 class ControllerPharma extends Controller{
     public function __construct(){
-        $this->model= $this->model('ModelPharma');
+        $this->modelpharma= $this->model('ModelPharma');
+        $this->model= $this->model('ModelCompte');
+        $this->session = new Session;
     }
     public function index(){
-        $result = $this->model->show();
+        $result = $this->modelpharma->show();
         $this->view('pages/pagePharma',$result);
     }
 
@@ -14,17 +16,33 @@ class ControllerPharma extends Controller{
 
     public function insert()
     {
+
+      $data =[];
+      // starting session
+      $this->session->startSession();
+      // checking if a user logged in & redirect to their home
+  if (!isset($_SESSION['id_user'])) {
+      header('location:' . URLROOT . '/users/login');
+  }
+      // print_r($_SESSION);
+      $id_user = $this->session->getSession('id_user');
+      //  getting data
+      $result = $this->modelpharma->getFK($id_user);
+    
+
+
+
     if (isset($_POST["submit"])) {
      $image=$_FILES['image']['tmp_name'];
       $data=[
-     'name_pharma' =>$_POST['name_pharma'],
+     'name_pharma' =>$_POST['name-pharma'],
      'localisation' => $_POST['localisation'],
      'phone'=>$_POST['phone'],
      'image' => $_FILES['image']['name'],
 
       ];
       if($this->uploadPhoto($image)===true){
-       if( $this->model->add($data) ){
+       if( $this->modelpharma->select($data) ){
          
          header('location:'.URLROOT .'/ControllerPharma/index');
       } else{
@@ -36,7 +54,7 @@ class ControllerPharma extends Controller{
      
     }
     
-      $this->view('pages/insert');
+      $this->view('pages/pharmacist/insert');
     }
 
 
@@ -44,7 +62,7 @@ class ControllerPharma extends Controller{
 
     public function uploadPhoto($image)
 {    
-  $dir = "C:\\xampp\htdocs\\projet_fils_rouge\public\img";    
+  $dir = "C:\\xampp\htdocs\\projet_fils_rouge\public\assets\img";    
  //  $time = time();   
    $name = str_replace(' ','-',strtolower($_FILES["image"]["name"]));    
    $type = $_FILES["image"]["type"];       
@@ -59,11 +77,11 @@ class ControllerPharma extends Controller{
 
   public function pharma(){
     $this->session->startSession();
-    $data_pharma= $this->model->selectFK($_SESSION['id_user']);
+    $data_pharma= $this->model->select($_SESSION['id_user']);
     $data=[
       'pharmacie' => $data_pharma
     ];
-    $this->view('pages/pagePharma',$data);
+    $this->view('pages/pharmacist/profile',$data);
   }
 
 

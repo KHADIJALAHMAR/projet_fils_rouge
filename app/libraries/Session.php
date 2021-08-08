@@ -7,7 +7,6 @@
         }
         // start session method
         public function startSession(){
-            
         }
         // set session method
         public function setSession($name,$value){

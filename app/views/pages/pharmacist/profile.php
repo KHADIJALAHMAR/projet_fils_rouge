@@ -45,8 +45,8 @@
                 <div class="profile-info col-md-9">
       <div class="panel">
           <footer class="panel-footer">
-              <button class="btn btn-warning pull-right">Post</button>
-            
+              <a href="<?php echo URLROOT; ?>/ControllerPharma/insert" class="btn btn-warning pull-right">create Post</a>
+
           </footer>
       </div>
       <div class="content-p">

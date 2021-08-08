@@ -1,4 +1,7 @@
 <?php include_once APPROOT . '/views/inc/header.php'; ?>
+
+
+
 <form class="container" action="<?php echo URLROOT; ?>/ControllerPharma/insert" method="POST" enctype="multipart/form-data">
   <div class="form-row">
     <div class="col">

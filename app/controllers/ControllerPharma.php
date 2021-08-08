@@ -26,6 +26,7 @@ class ControllerPharma extends Controller{
   }
       // print_r($_SESSION);
       $id_user = $this->session->getSession('id_user');
+      var_dump($_SESSION);
       //  getting data
       $result = $this->modelpharma->getFK($id_user);
     
@@ -75,14 +76,14 @@ class ControllerPharma extends Controller{
   }
 
 
-  public function pharma(){
-    $this->session->startSession();
-    $data_pharma= $this->model->select($_SESSION['id_user']);
-    $data=[
-      'pharmacie' => $data_pharma
-    ];
-    $this->view('pages/pharmacist/profile',$data);
-  }
+  // public function pharma(){
+  //   $this->session->startSession();
+  //   $data_pharma= $this->model->select($_SESSION['id_user']);
+  //   $data=[
+  //     'pharmacie' => $data_pharma
+  //   ];
+  //   $this->view('pages/pharmacist/profile',$data);
+  // }
 
 
 

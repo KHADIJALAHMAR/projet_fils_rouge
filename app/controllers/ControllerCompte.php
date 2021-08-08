@@ -139,6 +139,7 @@ class ControllerCompte extends Controller
               $user = $this->model->login($data['email'], $data['pass_word'],$data['fname']);
               if ($user) {
                   // Create Session
+                  $this->Session->setSession('id_user',$user->id_user);
                   $this->Session->setSession('email',$user->email);
                   $this->Session->setSession('fname',$user->fname);
                   $this->view('pages/pharmacist/profile');

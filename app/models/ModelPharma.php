@@ -41,9 +41,9 @@ public function select($data)
         return false;
     }
 }
-public function get_pharma(){
+public function get_pharma($id_user){
     $this->db->query("SELECT * FROM pharmacy WHERE id_user = :id_user");
-    $this->db->bind('id_user',$_SESSION['id_user']);
+    $this->db->bind('id_user',$id_user);
     $results = $this->db->single();
     return $results;
 }

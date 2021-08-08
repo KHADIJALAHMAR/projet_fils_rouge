@@ -74,6 +74,7 @@ class ControllerPharma extends Controller{
      return false;   
     }   
   }
+  
 
 
   // public function pharma(){

@@ -27,7 +27,7 @@
         <span class="danger" style="color:#E8E4E6"><?php echo $data['password_err'] ?? '' ?></span>
         <label style="color:#E8E4E6" for="cars" name="role">Choose a car:</label>
         <select class="style-input" id="cars" name="role" <?php echo (!empty($data['role_err'])) ? 'is-invalid' : '' ?> value="<?php echo $data['role'] ?? '' ?>">
-          <option> pharmasict </option>
+          <option> pharmacist </option>
           <option> Admin </option>
         </select>
 

@@ -28,12 +28,12 @@
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" href="#">Yo pharma</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Accueille</a>
+            <a class="nav-link text-muted" href="#">Accueille</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pharmacies</a>
@@ -41,8 +41,15 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-        </ul>
+      </ul>
       </div>
+      <ul class="nav navbar-nav ml-auto ">
+        <li  class="nav-item">
+        <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
+        <a class="nav-link"  href="<?php echo URLROOT; ?>/ControllerCompte/index"><span class="fas fa-user" style="color:#42B130" ></span> Profile</a>
+        <?php endif; ?>
+        </li>
+      </ul>
     </div>
   </nav>
   <!-- Navbar -->

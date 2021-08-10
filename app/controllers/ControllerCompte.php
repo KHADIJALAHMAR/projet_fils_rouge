@@ -9,7 +9,7 @@ class ControllerCompte extends Controller
 
   public function index()
   {
-    $this->view('pages/Landingpage');
+    $this->view('pages/pharmacist/profile');
   }
   public function insert()
   {

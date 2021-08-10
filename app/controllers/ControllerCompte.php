@@ -100,13 +100,6 @@ class ControllerCompte extends Controller
     {
 
         $this->Session->startSession();
-
-        // if (isset($_SESSION['email'])) {
-
-        //     header('location:' . URLROOT . '/ProfilController/pageProfil');
-        // }
-
-
               // Check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           // Sanitize POST data
@@ -143,12 +136,12 @@ class ControllerCompte extends Controller
                   $this->Session->setSession('email',$user->email);
                   $this->Session->setSession('fname',$user->fname);
                   $this->Session->setSession('role',$user->role);
-
-                  if ($this->Session->getSession('role') == 'pharmacist') {
-                    header('location:' . URLROOT . '/ControllerPharma/index');
+                  $this->view('pages/pharmacist/profile');
+                  // if ($this->Session->getSession('role') == 'pharmacist') {
+                  //   header('location:' . URLROOT . '/ControllerPharma/index');
                   // }elseif ($this->Session->getSession('role') == 'Admin') {
                   //   header('location:' . URLROOT . '/ControllerPharma/index');
-                  }
+                  // }
                   
 
               } else {

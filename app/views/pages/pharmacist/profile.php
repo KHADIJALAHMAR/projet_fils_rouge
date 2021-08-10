@@ -51,14 +51,14 @@
       </div>
       <div class="content-p">
 <div class="card content " style="width: 18rem;">
-    <img src="/assets/img/<?php echo $data->image ?>" class="card-img-top" alt="img">
+    <img src="<?= URLROOT."/assets/img/".$data->image; ?>" class="card-img-top" alt="img">
     <div class="card-body">
     <h5 class="card-title" ><?php echo $data->name_pharma ?></h5>
     <a href="#" class="card-link">Localisation :<?php echo $data->localisation ?></a>
     <p class="card-text"><?php echo $data->phone?></p>
 
     <a href="#" class="btn btn-primary">Go somewhere</a>
-    <?php var_dump($data)?>
+   
   </div>
 </div>
 

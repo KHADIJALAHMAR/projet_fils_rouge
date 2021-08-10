@@ -86,19 +86,8 @@ if (!isset($_SESSION['id_user'])) {
     var_dump($id_user);
     //  getting data
     $result = $this->modelpharma->get_pharma($id_user);
-    $this->view('pages/pharmacist/profile',$result);
+    header('location:'.URLROOT .'/ControllerCompte/index' );
   }
-
-
-
-  // public function pharma(){
-  //   $this->session->startSession();
-  //   $data_pharma= $this->model->select($_SESSION['id_user']);
-  //   $data=[
-  //     'pharmacie' => $data_pharma
-  //   ];
-  //   $this->view('pages/pharmacist/profile',$data);
-  // }
 
 
 

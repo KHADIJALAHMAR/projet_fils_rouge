@@ -25,23 +25,26 @@
 <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
 <button>Ajouter</button>
 <?php endif; ?>
-<!-- crd tous pharma -->
-<div class="content-p">
-<div class="card content " style="width: 18rem;">
-    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
-    <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="card-link">Localisation</a>
-    <p class="card-text">Numéro de téléphone</p>
-
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-    <?php var_dump($data)?>
-  </div>
-</div>
-</div>
+<!-- card tous pharma -->
+<!--  -->
 <!-- maps -->
 
 
 
+    <!-- ################################# -->
 
-
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <?php foreach ($data as $row):?>
+    <div class="col">
+    <div class="card">
+      <img src="<?= URLROOT."/assets/img/".$row->image; ?>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $row->name_pharma;?></h5>
+        <p class="card-text"><?php echo $row->phone;?></p>
+      </div>
+    </div>
+  </div>
+  <?php endforeach;?>
+    </div>
+    
+  

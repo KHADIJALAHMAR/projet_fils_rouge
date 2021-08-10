@@ -53,7 +53,6 @@ class ControllerCompte extends Controller
        if (empty($data['role'])) {
         $data['name_err'] = 'Please enter role';
       }
-
       // Validate Password
       if (empty($data['pass_word'])) {
         $data['password_err'] = 'Please enter password';
@@ -137,7 +136,7 @@ class ControllerCompte extends Controller
                   $this->Session->setSession('fname',$user->fname);
                   $this->Session->setSession('role',$user->role);
                   if ($this->Session->getSession('role') == 'pharmacist') {
-                    header('location:' . URLROOT . '/ControllerPharma/index');
+                    header('location:' . URLROOT . '/ControllerCompte/set_pharma');
                   // }elseif ($this->Session->getSession('role') == 'Admin') {
                   //   header('location:' . URLROOT . '/ControllerPharma/index');
                   // }
@@ -165,7 +164,7 @@ class ControllerCompte extends Controller
       }
 
     
-  }
+  }$this->view('pages/login');
 
 
 

@@ -32,7 +32,7 @@
         </select>
 
         <input class="btn-card" type="submit" name="submit" />
-        <p style="color:#E8E4E6">You already have an account? <span style="color:#42B130"><a>Login</a></span></p>
+        <p>You already have an account?<span style="color:#42B130"><a href="<?php echo URLROOT; ?>/ControllerCompte/select">login</a></span></p>
       </form>
     </div>
   </div>

@@ -10,7 +10,7 @@
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3"><img src="<?php echo URLROOT; ?>/assets/img/profil4.jpg"  alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-success btn-sm btn-block">Edit profile</a></div>
                     <div class="media-body mb-5 text-dark">
-                        <h4 class="mt-0 mb-0 "  style="color:#42B130">khadija lahmar</h4>
+                        <h4 class="mt-0 mb-0 "  style="color:#42B130"><?php echo $_SESSION['fname'] ?></h4>
                         <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Youssoufia</p>
                     </div>
                 </div>
@@ -18,11 +18,11 @@
             <div class="bg-light p-4 d-flex justify-content-end text-center">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">email</h5><small class="text-muted"> <i class="bi bi-envelope"></i>pharmacist@gmail.com</small>
+                        <h5 class="font-weight-bold mb-0 d-block">email</h5><small class="text-muted"> <i class="bi bi-envelope"></i><?php echo $_SESSION['email'] ?></small>
                     </li>
-                    <li class="list-inline-item">
+                    <!-- <li class="list-inline-item">
                         <h5 class="font-weight-bold mb-0 d-block ">Numéro</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Numéro-télephone</small>
-                    </li>
+                    </li> -->
                     <li class="list-inline-item">
                         <h5 class="font-weight-bold mb-0 d-block">localisation</h5><small class="text-muted"> <i class="fas fa-map-marker-alt mr-2"></i>localisation</small>
                     </li>
@@ -51,16 +51,17 @@
       </div>
       <div class="content-p">
 <div class="card content " style="width: 18rem;">
-    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
+    <img src="/assets/img/<?php echo $data->image ?>" class="card-img-top" alt="img">
     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="card-link">Localisation</a>
-    <p class="card-text">Numéro de téléphone</p>
+    <h5 class="card-title" ><?php echo $data->name_pharma ?></h5>
+    <a href="#" class="card-link">Localisation :<?php echo $data->localisation ?></a>
+    <p class="card-text"><?php echo $data->phone?></p>
 
     <a href="#" class="btn btn-primary">Go somewhere</a>
     <?php var_dump($data)?>
   </div>
 </div>
+
 </div>
                 </div>
             </div>

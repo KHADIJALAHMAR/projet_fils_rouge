@@ -46,7 +46,7 @@
       <ul class="nav navbar-nav ml-auto ">
         <li  class="nav-item">
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
-        <a class="nav-link"  href="<?php echo URLROOT; ?>/ControllerCompte/index"><span class="fas fa-user" style="color:#42B130" ></span> Profile</a>
+        <a class="nav-link  text-muted"  href="<?php echo URLROOT; ?>/ControllerPharma/set_pharma"><span class="fas fa-user" style="color:#42B130" ></span> Profile</a>
         <?php endif; ?>
         </li>
       </ul>

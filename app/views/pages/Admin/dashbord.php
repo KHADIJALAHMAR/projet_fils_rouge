@@ -1,67 +1,131 @@
 <?php include_once APPROOT . '/views/inc/header.php'; ?>
-<?php include_once APPROOT . '/views/inc/navbar.php';?>
-<div class="row py-5 px-4 main-profil">
-    <div class="col-md-5 mx-auto">
-        <!-- Profile widget -->
-        <div class="bg-white shadow rounded overflow-hidden">
-            <div class="px-4 pt-0 pb-4 cover">
-                <div class="media align-items-end profile-head">
-                    <div class="profile mr-3"><img src="<?php echo URLROOT; ?>/assets/img/profil4.jpg"  alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-success btn-sm btn-block">Edit profile</a></div>
-                    <div class="media-body mb-5 text-dark">
-                        <h4 class="mt-0 mb-0 "  style="color:#42B130">khadija lahmar</h4>
-                        <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Youssoufia</p>
+
+<body>
+    <main class="root_m">
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                    class="fas fa-user-secret me-2"></i>Yopharma</div>
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                        class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Dashboard</h2>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>John Doe
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4">
+                <div class="row g-3 my-2">
+
+                <div class="row my-5">
+                    <h3 class="fs-4 mb-3">pharmacy</h3>
+                    <div class="col">
+                        <table class="table bg-white rounded shadow-sm  table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" width="50">#</th>
+                                    <th scope="col">id_pharma</th>
+                                    <th scope="col">name_pharma</th>
+                                    <th scope="col">localisation</th>
+                                    <th scope="col">phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Television</td>
+                                    <td>Jonny</td>
+                                    <td>$1200</td>
+                                </tr>
+
+                    
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
-            <div class="bg-light p-4 d-flex justify-content-end text-center">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">email</h5><small class="text-muted"> <i class="bi bi-envelope"></i>pharmacist@gmail.com</small>
-                    </li>
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block ">Numéro</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Numéro-télephone</small>
-                    </li>
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">localisation</h5><small class="text-muted"> <i class="fas fa-map-marker-alt mr-2"></i>localisation</small>
-                    </li>
+<!-- """""""""""""""""""""""""""""""""""""""" -->
+<div class="container-fluid px-4">
+    <div class="row g-3 my-2">
 
-                </ul>
-            </div>
-            <div class="px-4 py-3">
-                <h5 class="mb-0">About</h5>
-                <div class="p-4 rounded shadow-sm bg-light">
-                    <h3 class="font-italic mb-0"  style="color:#42B130">gard pharmacies</h3>
-                    <p class="font-italic mb-0">we help you know the available gard pharmaciesevery day.</p>
-                    <p class="font-italic mb-0"></p>
-                </div>
-            </div>
-            <div class="py-4 px-4">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Post</h5><a href="#" class="btn btn-link text-muted">Show all</a>
-                </div>
-                <div class="row">
-                <div class="profile-info col-md-9">
-      <div class="panel">
-          <footer class="panel-footer">
-              <a href="<?php echo URLROOT; ?>/ControllerPharma/insert" class="btn btn-warning pull-right">create Post</a>
+    <div class="row my-5">
+        <h3 class="fs-4 mb-3">pharmacist</h3>
+        <div class="col">
+            <table class="table bg-white rounded shadow-sm  table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" width="50">#</th>
+                        <th scope="col">id</th>
+                        <th scope="col">fname</th>
+                        <th scope="col">Lname</th>
+                        <th scope="col">email</th>
+                        <th scope="col">password</th>
+                        <th scope="col">role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Television</td>
+                        <td>Jonny</td>
+                        <td>$1200</td>
+                    </tr>
 
-          </footer>
-      </div>
-      <div class="content-p">
-<div class="card content " style="width: 18rem;">
-    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
-    <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="card-link">Localisation</a>
-    <p class="card-text">Numéro de téléphone</p>
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-    <?php var_dump($data)?>
-  </div>
 </div>
-</div>
-                </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script> -->
+    </main>
+</body>
+
+</html>

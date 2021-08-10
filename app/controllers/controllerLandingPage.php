@@ -5,6 +5,6 @@ class ControllerLandingPage extends Controller {
        
     }
     public function index(){
-        $this->view('pages/landingPage');
+        $this->view('pages/Admin/dashbord');
     }
 }

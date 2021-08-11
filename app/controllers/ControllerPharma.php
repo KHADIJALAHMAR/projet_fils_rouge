@@ -27,7 +27,6 @@ class ControllerPharma extends Controller{
   }
       // print_r($_SESSION);
       $id_user = $this->session->getSession('id_user');
-      var_dump($_SESSION);
       //  getting data
       $result = $this->modelpharma->getFK($id_user);
     

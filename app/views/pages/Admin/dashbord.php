@@ -67,16 +67,17 @@
 		        </tr>
 		    </thead>
             <tbody>
-		        <tr id="d1">
-		            <td>1</td>
-		            <td id="f1">John</td>
-		            <td id="l1">Wick</td>
-		            <td id="m1">Doewick@gmail.com</td>
-                    <td id="m1">password</td>
+            <?php foreach ($data['pharmacists'] as $pharmacist):?>
+		            <td id="f1"><?php echo $pharmacist->id_user ?></td>
+		            <td id="l1"><?php echo $pharmacist->fname ?></td>
+		            <td id="m1"><?php echo $pharmacist->lname ?></td>
+                    <td id="m1"><?php echo $pharmacist->email ?></td>
+                    <td id="m1"><?php echo $pharmacist->pass_word ?></td>
                     <td id="m1">role</td>
-                    <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $row->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
+                    <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $pharmacist->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
 		           
 		        </tr>
+                <?php endforeach ; ?>
 		    </tbody>
 		</table>
 	
@@ -105,14 +106,14 @@
 		    </thead>
             <tbody>
 		        <tr id="d1">
-                <?php foreach ($data as $row):?>
-		            <td id="f1"><?php echo $row->id_pharmacy ?></td>
-		            <td id="l1"><?php echo $row->name_pharma ?></td>
-		            <td id="m1"><?php echo $row->localisation ?></td>
-                    <td id="m1"><?php echo $row->image ?></td>
-                    <td id="m1"><?php echo $row->id_user ?></td>
-		            <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $row->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
-                    <td><a href="<?php echo URLROOT;?>/Contact/update/<?php echo $row->id;?>"class="btn btn-success"
+                <?php foreach ($data['pharmacy'] as $pharmacy):?>
+		            <td id="f1"><?php echo $pharmacy->id_pharmacy ?></td>
+		            <td id="l1"><?php echo $pharmacy->name_pharma ?></td>
+		            <td id="m1"><?php echo $pharmacy->localisation ?></td>
+                    <td id="m1"><?php echo $pharmacy->image ?></td>
+                    <td id="m1"><?php echo $pharmacy->id_user ?></td>
+		            <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $pharmacy->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
+                    <td><a href="<?php echo URLROOT;?>/Contact/update/<?php echo $pharmacy->id;?>"class="btn btn-success"
                     <span class="glyphicon glyphicon-pencil"></span>Edit</a></td>
                    
 		        </tr>

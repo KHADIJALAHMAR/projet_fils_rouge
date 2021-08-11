@@ -3,17 +3,31 @@ class ControllerAdmin extends Controller
 {
   public function __construct()
   {
-    $this->model = $this->model('ModelAdmin');
+    $this->adminModel = $this->model('ModelAdmin');
     $this->Session = new Session;
   }
   public function index()
   {
-    $result = $this->model->select_pharmacy();
-    $this->view('pages/Admin/dashbord',$result);
+    $pharmacy = $this->adminModel->select_pharmacy();
+    $pharmacists = $this->adminModel->selectPharmacists();
+
+    $data = [
+      'pharmacy' => $pharmacy,
+      'pharmacists' => $pharmacists
+    ];
+
+
+    $this->view('pages/Admin/dashbord',$data);
   }
+
   public function show_user(){
-      $data = $this->medel->select_user();
-      $this->view('page/Admin/dashbord',$data);
+     
+      $role_users = $this->adminModel->selectPharmacists();
+
+      $data = [
+        'role_users' => $role_users
+      ];
+      $this->view('pages/Admin/dashbord',$data);
   }
 
 }

@@ -137,9 +137,9 @@ class ControllerCompte extends Controller
                   $this->Session->setSession('role',$user->role);
                   if ($this->Session->getSession('role') == 'pharmacist') {
                     header('location:' . URLROOT . '/Controllerpharma/index');
-                  // }elseif ($this->Session->getSession('role') == 'Admin') {
-                  //   header('location:' . URLROOT . '/ControllerPharma/index');
-                  // }
+                  }elseif ($this->Session->getSession('role') == 'Admin') {
+                    header('location:' . URLROOT . '/ControllerPharma/index');
+                  }
                   
 
               } else {
@@ -164,11 +164,10 @@ class ControllerCompte extends Controller
       }
 
     
-  }$this->view('pages/login');
+  }
 
 
 
 
 
-}
 }

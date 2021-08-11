@@ -48,6 +48,9 @@
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
         <a class="nav-link  text-muted"  href="<?php echo URLROOT; ?>/ControllerPharma/set_pharma"><span class="fas fa-user" style="color:#42B130" ></span> Profile</a>
         <?php endif; ?>
+        <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "Admin"): ?>
+        <a class="nav-link  text-muted"  href="<?php echo URLROOT; ?>/ControllerAdmin/index"><span class="fas fa-user" style="color:#42B130" ></span>Dashboard</a>
+        <?php endif; ?>
         </li>
       </ul>
     </div>

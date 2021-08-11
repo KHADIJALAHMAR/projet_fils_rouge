@@ -74,7 +74,7 @@
                     <td id="m1"><?php echo $pharmacist->email ?></td>
                     <td id="m1"><?php echo $pharmacist->pass_word ?></td>
                     <td id="m1">role</td>
-                    <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $pharmacist->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
+                    <td><a href="<?php echo URLROOT;?>/CntrollerAdmin/delete?id=<?php echo $pharmacist->id_user;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
 		           
 		        </tr>
                 <?php endforeach ; ?>
@@ -112,9 +112,9 @@
 		            <td id="m1"><?php echo $pharmacy->localisation ?></td>
                     <td id="m1"><?php echo $pharmacy->image ?></td>
                     <td id="m1"><?php echo $pharmacy->id_user ?></td>
-		            <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $pharmacy->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
-                    <td><a href="<?php echo URLROOT;?>/Contact/update/<?php echo $pharmacy->id;?>"class="btn btn-success"
-                    <span class="glyphicon glyphicon-pencil"></span>Edit</a></td>
+		            <td><a href="<?php echo URLROOT;?>/CntrollerAdmin/delete?id=<?php echo $pharmacy->id_pharmacy;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
+                    <!-- <td><a href="<?php echo URLROOT;?>/CntrollerAdmin/update/<?php echo $pharmacy->id;?>"class="btn btn-success"
+                    <span class="glyphicon glyphicon-pencil"></span>Edit</a></td> -->
                    
 		        </tr>
                 <?php endforeach ; ?>

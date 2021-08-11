@@ -25,7 +25,7 @@ public function getFk ($id_user){
 }
 
 
-public function insert($data)
+public function add($data)
 {
     $this->db->query("INSERT INTO `pharmacy` ( `name_pharma`, `localisation`, `image`, `phone`, `id_user`) VALUES (:name_pharma, :localisation, :image, :phone, :id_user)");
     $this->db->bind('name_pharma',$data['name_pharma']);

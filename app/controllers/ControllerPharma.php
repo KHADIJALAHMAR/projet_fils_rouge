@@ -42,7 +42,7 @@ class ControllerPharma extends Controller{
 
       ];
       if($this->uploadPhoto($image)===true){
-       if( $this->modelpharma->insert($data) ){
+       if( $this->modelpharma->add($data) ){
          
          header('location:'.URLROOT .'/ControllerPharma/index');
       } else{

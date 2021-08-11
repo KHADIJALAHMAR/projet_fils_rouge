@@ -6,4 +6,10 @@ class ControllerAdmin extends Controller
     $this->model = $this->model('ModelAdmin');
     $this->Session = new Session;
   }
+  public function index()
+  {
+    $result = $this->modelAdmin->select();
+    $this->view('pages/Admin/dashbord',$result);
+  }
+
 }

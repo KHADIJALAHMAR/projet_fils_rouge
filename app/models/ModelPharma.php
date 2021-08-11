@@ -46,13 +46,9 @@ public function get_pharma($id_user){
     $results = $this->db->single();
     return $results;
 }
-public function getPharmabyId($id){
-    $this->db->query("SELECT * FROM `pharmacy` WHERE id = :id");
-    $this->db->bind(':id',$id);
-    $results = $this->db->single();
 
-    return $results;
-  }
+
+
 
 
 }

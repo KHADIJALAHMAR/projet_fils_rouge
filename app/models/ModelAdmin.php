@@ -23,6 +23,14 @@ public function selectPharmacists(){
         return false;
     }
 }
+public function getPharmabyId($id)
+{
+    $this->db->query("SELECT * FROM `pharmacy` WHERE id_pharmacy = :id");
+    $this->db->bind(':id',$id);
+    $results = $this->db->single();
+
+    return $results;
+}
 
 
 }

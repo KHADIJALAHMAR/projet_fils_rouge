@@ -37,7 +37,7 @@
     <?php foreach ($data as $row):?>
     <div class="col">
     <div class="card">
-      <img src="<?= URLROOT."/assets/img/".$row->image; ?>" class="card-img-top" alt="...">
+      <img src="<?= URLROOT."/assets/img/".$row->image; ?>" class="card-img-top" alt="image">
       <div class="card-body">
         <h5 class="card-title"><?php echo $row->name_pharma;?></h5>
         <p class="card-text"><?php echo $row->phone;?></p>

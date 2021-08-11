@@ -53,28 +53,36 @@
                 <div class="row my-5">
                     <h3 class="fs-4 mb-3">pharmacy</h3>
                     <div class="col">
-                        <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">id_pharma</th>
-                                    <th scope="col">name_pharma</th>
-                                    <th scope="col">localisation</th>
-                                    <th scope="col">phone</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Television</td>
-                                    <td>Jonny</td>
-                                    <td>$1200</td>
-                                </tr>
+		<table class="table bg-white rounded shadow-sm  table-hover">
+		    <thead>
+		        <tr>
+		            <th>ID</th>
+		            <th>First Name</th>
+		            <th>Last Name</th>
+		            <th>email</th>
+                    <th>password</th>
+                    <th>role</th>
+                    <th>Delete</th>
+		          
+		        </tr>
+		    </thead>
+            <tbody>
+		        <tr id="d1">
+		            <td>1</td>
+		            <td id="f1">John</td>
+		            <td id="l1">Wick</td>
+		            <td id="m1">Doewick@gmail.com</td>
+                    <td id="m1">password</td>
+                    <td id="m1">role</td>
+                    <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $row->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
+		           
+		        </tr>
+		    </tbody>
+		</table>
+	
 
-                    
-                            </tbody>
-                        </table>
                     </div>
+                    
                 </div>
 <!-- """""""""""""""""""""""""""""""""""""""" -->
 <div class="container-fluid px-4">
@@ -84,27 +92,27 @@
         <h3 class="fs-4 mb-3">pharmacist</h3>
         <div class="col">
             <table class="table bg-white rounded shadow-sm  table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col" width="50">#</th>
-                        <th scope="col">id</th>
-                        <th scope="col">fname</th>
-                        <th scope="col">Lname</th>
-                        <th scope="col">email</th>
-                        <th scope="col">password</th>
-                        <th scope="col">role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                    </tr>
-
-        
-                </tbody>
+            <tr>
+		            <th>ID</th>
+		            <th>name_pharmacie</th>
+		            <th>Localisation</th>
+		            <th>phone</th>
+                    <th>Delete</th>
+		            <th>Edit</th>
+		           
+		        </tr>
+		    </thead>
+            <tbody>
+		        <tr id="d1">
+		            <td>1</td>
+		            <td id="f1">hhjkhjhj</td>
+		            <td id="l1">sdfghjbklmùùlmlùmlùmlùmlùlùmlùlùmlmùlmùlmùlmlmùlù</td>
+		            <td id="m1">1234567890</td>
+		            <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $row->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
+                    <td><a href="<?php echo URLROOT;?>/Contact/update/<?php echo $row->id;?>"class="btn btn-success"
+                    <span class="glyphicon glyphicon-pencil"></span>Edit</a></td>
+		        </tr>
+		    </tbody>
             </table>
         </div>
     </div>
@@ -116,7 +124,7 @@
     <!-- /#page-content-wrapper -->
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
@@ -124,7 +132,7 @@
         toggleButton.onclick = function () {
             el.classList.toggle("toggled");
         };
-    </script> -->
+    </script>
     </main>
 </body>
 

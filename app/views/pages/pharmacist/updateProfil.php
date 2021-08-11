@@ -176,38 +176,3 @@
   </div>
 </div>
 </div>
-
-              <!-- <div class="container">
-	<div class="row">
-		<table class="table table-hover table-responsive">
-		    <thead>
-		        <tr>
-		            <th>ID</th>
-		            <th>First Name</th>
-		            <th>Last Name</th>
-		            <th>Middle Name</th>
-		            <th>Edit</th>
-		            <th>Delete</th>
-		        </tr>
-		    </thead>
-            <tbody>
-		        <tr id="d1">
-		            <td>1</td>
-		            <td id="f1">John</td>
-		            <td id="l1">Wick</td>
-		            <td id="m1">Doe</td>
-		            <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
-		            <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
-		        </tr>
-		        <tr id="d2">
-		            <td>2</td>
-		            <td id="f2">Jane</td>
-		            <td id="l2">Wick</td>
-		            <td id="m2">Doe</td>
-		            <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="2" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
-		            <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="2" class="delete btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button></td>
-		        </tr>
-		    </tbody>
-		</table>
-	</div>
-</div> -->

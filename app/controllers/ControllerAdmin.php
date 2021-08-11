@@ -8,7 +8,7 @@ class ControllerAdmin extends Controller
   }
   public function index()
   {
-    $result = $this->modelAdmin->select();
+    $result = $this->model->select();
     $this->view('pages/Admin/dashbord',$result);
   }
 

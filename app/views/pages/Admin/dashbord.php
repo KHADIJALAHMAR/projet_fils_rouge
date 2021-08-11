@@ -51,7 +51,7 @@
                 <div class="row g-3 my-2">
 
                 <div class="row my-5">
-                    <h3 class="fs-4 mb-3">pharmacy</h3>
+                    <h3 class="fs-4 mb-3">pharmacist</h3>
                     <div class="col">
 		<table class="table bg-white rounded shadow-sm  table-hover">
 		    <thead>
@@ -89,14 +89,15 @@
     <div class="row g-3 my-2">
 
     <div class="row my-5">
-        <h3 class="fs-4 mb-3">pharmacist</h3>
+        <h3 class="fs-4 mb-3">pharmacy</h3>
         <div class="col">
             <table class="table bg-white rounded shadow-sm  table-hover">
             <tr>
 		            <th>ID</th>
 		            <th>name_pharmacie</th>
 		            <th>Localisation</th>
-		            <th>phone</th>
+                    <th>image</th>
+                    <th>id_user</th>
                     <th>Delete</th>
 		            <th>Edit</th>
 		           
@@ -104,14 +105,18 @@
 		    </thead>
             <tbody>
 		        <tr id="d1">
-		            <td>1</td>
-		            <td id="f1">hhjkhjhj</td>
-		            <td id="l1">sdfghjbklmùùlmlùmlùmlùmlùlùmlùlùmlmùlmùlmùlmlmùlù</td>
-		            <td id="m1">1234567890</td>
+                <?php foreach ($data as $row):?>
+		            <td id="f1"><?php echo $row->id_pharmacy ?></td>
+		            <td id="l1"><?php echo $row->name_pharma ?></td>
+		            <td id="m1"><?php echo $row->localisation ?></td>
+                    <td id="m1"><?php echo $row->image ?></td>
+                    <td id="m1"><?php echo $row->id_user ?></td>
 		            <td><a href="<?php echo URLROOT;?>/Contact/delete?id=<?php echo $row->id;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
                     <td><a href="<?php echo URLROOT;?>/Contact/update/<?php echo $row->id;?>"class="btn btn-success"
                     <span class="glyphicon glyphicon-pencil"></span>Edit</a></td>
+                   
 		        </tr>
+                <?php endforeach ; ?>
 		    </tbody>
             </table>
         </div>

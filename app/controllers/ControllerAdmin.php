@@ -8,8 +8,9 @@ class ControllerAdmin extends Controller
   }
   public function index()
   {
-    $result = $this->model->select();
+    $result = $this->model->select_pharmacy();
     $this->view('pages/Admin/dashbord',$result);
   }
+  
 
 }

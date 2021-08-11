@@ -4,12 +4,22 @@ class ControllerCompte extends Controller
   public function __construct()
   {
     $this->model = $this->model('ModelCompte');
+    $this->Adminmodel= $this->model('ModelAdmin');
+    $this->modelpharma= $this->model('ModelPharma');
     $this->Session = new Session;
   }
 
   public function index()
   {
-    $this->view('pages/pharmacist/profile');
+    // satrting session
+    $this->Session->startSession();
+    // getting id session
+    $id_user = $this->Session->getSession('id_user');
+    // getting data
+    $result = $this->modelpharma->get_pharma($id_user);
+    var_dump($result);
+    // sending data
+    $this->view('pages/pharmacist/profile',$result);
   }
   public function insert()
   {

@@ -50,6 +50,7 @@
           </footer>
       </div>
       <div class="content-p">
+<?php if ($data): ?>
 <div class="card content " style="width: 18rem;">
     <img src="<?= URLROOT."/assets/img/".$data->image; ?>" class="card-img-top" alt="img">
     <div class="card-body">
@@ -60,6 +61,8 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>
    
   </div>
+<?php endif; ?>
+
 </div>
 
 </div>

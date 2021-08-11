@@ -73,18 +73,10 @@ class ControllerPharma extends Controller{
     }   
   }
   public function set_pharma(){
-    $data =[];
-    // starting session
-    $this->session->startSession();
-    // checking if a user logged in & redirect to their home
+
 if (!isset($_SESSION['id_user'])) {
     header('location:' . URLROOT . '/users/login');
 }
-    // print_r($_SESSION);
-    $id_user = $this->session->getSession('id_user');
-    var_dump($id_user);
-    //  getting data
-    $result = $this->modelpharma->get_pharma($id_user);
     header('location:'.URLROOT .'/ControllerCompte/index' );
   }
 

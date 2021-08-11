@@ -42,7 +42,7 @@ public function add($data)
 }
 public function get_pharma($id_user){
     $this->db->query("SELECT * FROM pharmacy WHERE id_user = :id_user");
-    $this->db->bind('id_user',$id_user);
+    $this->db->bind(':id_user',$id_user);
     $results = $this->db->single();
     return $results;
 }

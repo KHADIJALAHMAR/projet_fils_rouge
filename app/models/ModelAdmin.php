@@ -36,10 +36,10 @@ public function deletPharmacist($id_Pharmacist)
   $this->db->bind(':id',$id_Pharmacist);
   $this->db->execute();
 }
-public function getPharmabyId($id)
+public function getPharmabyId($id_pharmacy)
 {
     $this->db->query("SELECT * FROM `pharmacy` WHERE id_pharmacy = :id");
-    $this->db->bind(':id',$id);
+    $this->db->bind(':id',$id_pharmacy);
     $results = $this->db->single();
 
     return $results;

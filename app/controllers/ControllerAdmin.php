@@ -38,12 +38,22 @@ class ControllerAdmin extends Controller
    header('location:' . URLROOT . '/ControllerAdmin/index');
    // echo $_GET['id'];
   }
+
   public function delete_pharmacist($id_pharmacist)
   {
     $this->adminModel->deletPharmacist($id_pharmacist); 
    header('location:' . URLROOT . '/ControllerAdmin/index');
    // echo $_GET['id'];
   }
-  
+  public function edit($id_pharmacy) {
+ 
+    $result =$this->adminModel->getPharmabyId($id_pharmacy);
+    if($result) {
+        $this->view('pages/Admin/update', $result);
+    }else {
+        return false;
+    }
+}
+
 
 }

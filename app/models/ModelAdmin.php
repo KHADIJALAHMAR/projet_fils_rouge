@@ -37,5 +37,11 @@ public function deletPharma($id_pharmacy)
   $this->db->bind(':id',$id_pharmacy);
   $this->db->execute();
 }
+public function deletPharmacist($id_Pharmacist)
+{
+  $this->db->query("DELETE FROM`users` WHERE `id_user` = :id");
+  $this->db->bind(':id',$id_Pharmacist);
+  $this->db->execute();
+}
 
 }

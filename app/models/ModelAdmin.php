@@ -31,11 +31,11 @@ public function getPharmabyId($id)
 
     return $results;
 }
-public function deletPharma($params)
+public function deletPharma($id_pharmacy)
 {
   $this->db->query("DELETE FROM`pharmacy` WHERE `id_pharmacy` = :id");
-  $this->db->bind(':id',$params['id']);
-  return $this->db->execute();
+  $this->db->bind(':id',$id_pharmacy);
+  $this->db->execute();
 }
 
 }

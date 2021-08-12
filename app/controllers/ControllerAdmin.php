@@ -8,8 +8,10 @@ class ControllerAdmin extends Controller
   }
   public function index()
   {
+    
     $pharmacy = $this->adminModel->select_pharmacy();
     $pharmacists = $this->adminModel->selectPharmacists(); 
+
 
     $data = [
       'pharmacy' => $pharmacy,
@@ -30,13 +32,10 @@ class ControllerAdmin extends Controller
       $this->view('pages/Admin/dashbord',$data);
   }
   
-  public function delete()
+  public function delete($id_pharmacy)
   {
-    $params=[
-      'id'=>$_GET['id']
-    ];
-   $this->adminModel->deletPharma($params); 
-   $this->view('pages/Admin/dashbord',$params);
+    $this->adminModel->deletPharma($id_pharmacy); 
+   header('location:' . URLROOT . '/ControllerAdmin/index');
    // echo $_GET['id'];
   }
 

@@ -112,7 +112,7 @@
 		            <td id="m1"><?php echo $pharmacy->localisation ?></td>
                     <td id="m1"><?php echo $pharmacy->image ?></td>
                     <td id="m1"><?php echo $pharmacy->id_user ?></td>
-		            <td><a href="<?php echo URLROOT;?>/CntrollerAdmin/delete?id=<?php echo $pharmacy->id_pharmacy;?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
+		            <td><a href="<?php echo URLROOT;?> /ControllerAdmin/delete/<?= $pharmacy->id_pharmacy; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>
                     <!-- <td><a href="<?php echo URLROOT;?>/CntrollerAdmin/update/<?php echo $pharmacy->id;?>"class="btn btn-success"
                     <span class="glyphicon glyphicon-pencil"></span>Edit</a></td> -->
                    

@@ -15,6 +15,7 @@
     <div class="form-group">
               <label for="">Image</label>
               <input type="file"  name="image" >
+              <input type="hidden" name="old_image"  value="<?php echo $data->image; ?>" >
       </div>
     <div class="form-group">
         <input type="submit" class="btn btn-primary" value="enter" name="submit">

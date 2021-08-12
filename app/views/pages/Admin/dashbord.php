@@ -74,7 +74,7 @@
                     <td id="m1"><?php echo $pharmacist->email ?></td>
                     <td id="m1"><?php echo $pharmacist->pass_word ?></td>
                     <td id="m1">role</td>
-                    <td><a href="<?php echo URLROOT;?>/ControllerAdmin/delete_pharmacist/<?= $pharmasict->id_user; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
+                    <td><a href="<?php echo URLROOT;?>/ControllerAdmin/delete_pharmacist/<?= $pharmacist->id_user; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a></td>
 		           
 		        </tr>
                 <?php endforeach ; ?>

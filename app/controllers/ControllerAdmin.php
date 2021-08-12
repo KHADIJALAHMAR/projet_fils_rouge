@@ -40,7 +40,7 @@ class ControllerAdmin extends Controller
   }
   public function delete_pharmacist($id_pharmacist)
   {
-    $this->adminModel->deletPharmasict($id_pharmacist); 
+    $this->adminModel->deletPharmacist($id_pharmacist); 
    header('location:' . URLROOT . '/ControllerAdmin/index');
    // echo $_GET['id'];
   }

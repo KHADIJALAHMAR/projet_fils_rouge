@@ -23,14 +23,7 @@ public function selectPharmacists(){
         return false;
     }
 }
-public function getPharmabyId($id)
-{
-    $this->db->query("SELECT * FROM `pharmacy` WHERE id_pharmacy = :id");
-    $this->db->bind(':id',$id);
-    $results = $this->db->single();
 
-    return $results;
-}
 public function deletPharma($id_pharmacy)
 {
   $this->db->query("DELETE FROM`pharmacy` WHERE `id_pharmacy` = :id");
@@ -42,6 +35,14 @@ public function deletPharmacist($id_Pharmacist)
   $this->db->query("DELETE FROM`users` WHERE `id_user` = :id");
   $this->db->bind(':id',$id_Pharmacist);
   $this->db->execute();
+}
+public function getPharmabyId($id)
+{
+    $this->db->query("SELECT * FROM `pharmacy` WHERE id_pharmacy = :id");
+    $this->db->bind(':id',$id);
+    $results = $this->db->single();
+
+    return $results;
 }
 
 }

@@ -44,5 +44,6 @@ class ControllerAdmin extends Controller
    header('location:' . URLROOT . '/ControllerAdmin/index');
    // echo $_GET['id'];
   }
+  
 
 }

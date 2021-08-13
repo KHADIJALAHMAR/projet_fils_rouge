@@ -97,6 +97,7 @@
 		            <th>ID</th>
 		            <th>name_pharmacie</th>
 		            <th>Localisation</th>
+                    <th>phone</th>
                     <th>image</th>
                     <th>id_user</th>
                     <th>Delete</th>
@@ -110,6 +111,7 @@
 		            <td id="f1"><?php echo $pharmacy->id_pharmacy ?></td>
 		            <td id="l1"><?php echo $pharmacy->name_pharma ?></td>
 		            <td id="m1"><?php echo $pharmacy->localisation ?></td>
+                    <td id="m1"><?php echo $pharmacy->phone?></td>
                     <td id="m1"><?php echo $pharmacy->image ?></td>
                     <td id="m1"><?php echo $pharmacy->id_user ?></td>
 		            <td><a href="<?php echo URLROOT;?> /ControllerAdmin/delete/<?= $pharmacy->id_pharmacy; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> </td>

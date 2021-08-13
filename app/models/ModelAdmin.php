@@ -46,13 +46,13 @@ public function getPharmabyId($id_pharmacy)
 }
 public function updatePhoto($data) {
    
-
-        $this->db->query("UPDATE `pharmacy` SET `name_pharma` = :name_pharma, `localisation`= :localisation, ,`image`= :image, `phone`= :phone, WHERE id_pharmacy = :id");
+        var_dump($data);
+        $this->db->query("UPDATE `pharmacy` SET `name_pharma` = :name_pharma, `localisation`= :localisation,`image`=:image , `phone`= :phone  WHERE id_pharmacy = :id_pharmacy");
         $this->db->bind(':name_pharma', $data['name_pharma']);
         $this->db->bind(':localisation', $data['localisation']);
         $this->db->bind(':image', $data['image']);
         $this->db->bind(':phone', $data['phone']);
-        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':id_pharmacy', $data['id_pharmacy']);
         if ($this->db->execute()) {
             return true;
         } else {

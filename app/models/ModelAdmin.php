@@ -60,4 +60,19 @@ public function updatePhoto($data) {
         }
 
     }
+
+
+
+
+
+    public function deletePhoto($data) {
+        $this->db->query("DELETE FROM `users` WHERE id_pharmacy = :id");
+        $this->db->bind(':id_pharmacy', $data['id_pharmacy']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+           return false;
+        }
+    }
     }

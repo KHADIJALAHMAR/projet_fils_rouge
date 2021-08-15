@@ -40,7 +40,9 @@
     <?php foreach ($data as $row):?>
     <div class="col-md-4 content-p">
     <div class="card ">
+    <div class="inner">
       <img src="<?= URLROOT."/assets/img/".$row->image; ?>" class="card-img-top" alt="image">
+    </div>
       <div class="card-body">
         <h5 class="card-title"><?php echo $row->name_pharma;?></h5>
         <p class="card-text"><?php echo $row->phone;?></p>

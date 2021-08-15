@@ -121,4 +121,27 @@ public function uploadPhoto($image)
 
 
 
+
+  public function deletePhoto() {
+    $data = [
+        'id_pharmacy' => $_POST['id'],
+        'image' => $_POST['image']
+      ];
+      if ($this->adminModel->deletePhoto($data)) {
+          $image = $data['image'];
+        
+          $path ="C:\\xampp\htdocs\\projet_fils_rouge\public\assets\img/$image";
+          chown($path, 666);
+
+          if (unlink($path)) {
+            header('location:' . URLROOT . '/' . '/ControllerAdmin/index');
+          }else {
+              $_SESSION["Le poste ne être pas supprimé"];
+          }
+    }else {
+        echo "Post not deleted";
+    }
+      
+    }
+
 }

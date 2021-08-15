@@ -4,6 +4,7 @@ main{
     background-color: #E8E4E6;
 }
 body{
+    font-size: none;
     background-color: #bdbdbd;
 }
 .content{

@@ -23,8 +23,10 @@
 </div>
 <!-- button -->
 <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
+  <div class="container">
 <button>Ajouter</button>
 <?php endif; ?>
+</div>
 <!-- card tous pharma -->
 <!--  -->
 <!-- maps -->
@@ -32,19 +34,23 @@
 
 
     <!-- ################################# -->
-
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="container">
+  
+    <div class="row row-cols-1 row-cols-md-2 g-4  ">
     <?php foreach ($data as $row):?>
-    <div class="col">
-    <div class="card">
+    <div class="col-md-4 content-p">
+    <div class="card ">
       <img src="<?= URLROOT."/assets/img/".$row->image; ?>" class="card-img-top" alt="image">
       <div class="card-body">
         <h5 class="card-title"><?php echo $row->name_pharma;?></h5>
         <p class="card-text"><?php echo $row->phone;?></p>
+        <a href="#" class="btn btn-primary" > <?php echo $row->localisation;?> Go somewhere</a>
       </div>
     </div>
   </div>
   <?php endforeach;?>
     </div>
+    </div>
+    
     
   

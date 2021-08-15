@@ -49,10 +49,11 @@
 
           </footer>
       </div>
+      <!-- tous pharma -->
       <div class="content-p">
 <?php if ($data): ?>
 <div class="card content " style="width: 18rem;">
-    <img src="<?= URLROOT."../assets/img/".$data->image; ?>" class="card-img-top" alt="img">
+    <img src="<?= URLROOT."/assets/img/".$data->image; ?>" class="card-img-top" alt="img">
     <div class="card-body">
     <h5 class="card-title" ><?php echo $data->name_pharma ?></h5>
     <a href="#" class="card-link">Localisation :<?php echo $data->localisation ?></a>
@@ -63,6 +64,7 @@
   </div>
 <?php endif; ?>
 
+
 </div>
 
 </div>
@@ -71,3 +73,5 @@
         </div>
     </div>
 </div>
+
+

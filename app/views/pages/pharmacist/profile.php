@@ -59,7 +59,7 @@
     <a href="#" class="card-link">Localisation :<?php echo $data->localisation ?></a>
     <p class="card-text"><?php echo $data->phone?></p>
     <a href="<?php echo URLROOT;?> /ControllerAdmin/delete/<?= $data->id_pharmacy; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> 
-                    <a href="<?php echo URLROOT;?>/ControllerAdmin/edit/<?php echo $data->id_pharmacy;?>"class="btn btn-success" 
+                    <a href="<?php echo URLROOT;?>/ControllerCompte/edit/<?php echo $data->id_pharmacy;?>"class="btn btn-success" 
                     <span class="glyphicon glyphicon-pencil"></span>Edit</a>
    
   </div>

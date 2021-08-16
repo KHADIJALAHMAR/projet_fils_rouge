@@ -180,7 +180,7 @@ public function updatePhoto() {
   if (isset($_POST['submit'])) {
       if (!empty($_FILES['image']) && !empty($_POST['name-pharma']) && !empty($_POST['localisation']) && !empty($_POST['phone'])) {
 
-        echo"heloo";
+       
           $new_image = $_FILES['image']['tmp_name'];
           $data = [
               'id_pharmacy' => $_POST['id'],
@@ -196,19 +196,47 @@ public function updatePhoto() {
          
           
               if ($this->uploadPhoto($new_image) === true) {
-                  $this->adminModel->updatePhoto($data);
+                  $this->AdminModel->updatePhoto($data);
 
                   header('location:' . URLROOT . '/ControllerCompte/index');
               }
-          
+              else{
+                echo"hello";
+              }
       }
   }
   
+
+
 }
 
 
+public function uploadPhoto($image)
+{    
+  $dir = "C:\\xampp\htdocs\\projet_fils_rouge\public\assets\img";    
+ //  $time = time();   
+   $name = str_replace(' ','-',strtolower($_FILES["image"]["name"]));    
+   $type = $_FILES["image"]["type"];       
+   if(move_uploaded_file($_FILES["image"]["tmp_name"],$dir."/".$name))
+   {       
+      return true;    }
+   else{      
+     return false;   
+    }   
+  }
+  
+  public function edit($id_pharmacy) {
+ 
+    $result =$this->Adminmodel->getPharmabyId($id_pharmacy);
+    if($result) {
+        $this->view('pages/Admin/update', $result);
+    }else {
+        return false;
+    }
 
 
 
 
+
+}
 }

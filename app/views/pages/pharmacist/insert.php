@@ -2,7 +2,7 @@
 <?php include_once APPROOT . '/views/inc/navbar.php';?>
 
 
-<div class="row justify-contet-center content-p">
+<div class="row justify-contet-centere content-p">
 <form class="container" action="<?php echo URLROOT; ?>/ControllerPharma/insert" method="POST" enctype="multipart/form-data">
   <div class="form-group">
       <input type="text" class="form-control" name="name-pharma" placeholder="name_pharma">
@@ -23,3 +23,4 @@
   </div>
   </div>
 </form>
+

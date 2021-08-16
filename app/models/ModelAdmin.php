@@ -75,4 +75,5 @@ public function updatePhoto($data) {
            return false;
         }
     }
+    
     }

@@ -124,7 +124,7 @@ public function uploadPhoto($image)
 
   public function deletePhoto() {
     $data = [
-        'id_pharmacy' => $_POST['id'],
+        'id_pharmacy' => $_POST['id_pharmacy'],
         'image' => $_POST['image']
       ];
       if ($this->adminModel->deletePhoto($data)) {

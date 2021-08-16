@@ -5,19 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css ?>">
+
   <title>Document</title>
 </head>
 <body>
   
 </body>
-</html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 <footer class="bg-success text-white text-center text-lg-start ">
   <!-- Grid container -->
-  <div class="container p-4 " style="height: max-content;">
+  <div class="container p-4 " style="height: max-content; ">
     <!--Grid row-->
     <div class="row">
       <!--Grid column-->
@@ -68,7 +68,7 @@
     <!--Grid row-->
   </div>
   <!-- Grid container -->
-
+  
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     <a class="text-white" href="https://mdbootstrap.com/">Copyright © 2021 YOPHARMA All rights reserved.</a>

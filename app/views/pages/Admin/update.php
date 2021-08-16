@@ -2,7 +2,7 @@
 
 
 <div class="row justify-contet-center">
-<form class="container" action="<?php echo URLROOT; ?>/ControllerCompte/updatePhoto" method="POST" enctype="multipart/form-data">
+<form class="container" action="<?php echo URLROOT; ?>/ControllerAdmin/updatePhoto" method="POST" enctype="multipart/form-data">
 
   <div class="form-group">
       <input type="text" class="form-control" name="name-pharma" placeholder="name_pharma"   value="<?php echo $data->name_pharma; ?>">

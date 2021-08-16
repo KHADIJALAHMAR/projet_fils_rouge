@@ -196,7 +196,7 @@ public function updatePhoto() {
          
           
               if ($this->uploadPhoto($new_image) === true) {
-                  $this->AdminModel->updatePhoto($data);
+                  $this->Adminmodel->updatePhoto($data);
 
                   header('location:' . URLROOT . '/ControllerCompte/index');
               }
@@ -229,7 +229,7 @@ public function uploadPhoto($image)
  
     $result =$this->Adminmodel->getPharmabyId($id_pharmacy);
     if($result) {
-        $this->view('pages/Admin/update', $result);
+        $this->view('pages/pharmacist/update', $result);
     }else {
         return false;
     }

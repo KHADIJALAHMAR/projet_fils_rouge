@@ -53,7 +53,7 @@
   <?php endforeach;?>
     </div>
     </div>
-    <?php include_once APPROOT . '/views/inc/footer.php'; ?>
+  
     
     
   

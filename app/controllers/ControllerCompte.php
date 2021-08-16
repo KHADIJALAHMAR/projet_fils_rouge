@@ -239,4 +239,15 @@ public function uploadPhoto($image)
 
 
 }
+
+
+
+
+public function delete($id_pharmacy)
+{
+  $this->Adminmodel->deletPharma($id_pharmacy); 
+ header('location:' . URLROOT . '/ControllerCompte/index');
+ // echo $_GET['id'];
+}
+
 }

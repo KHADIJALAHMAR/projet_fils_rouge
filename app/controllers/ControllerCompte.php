@@ -175,6 +175,37 @@ class ControllerCompte extends Controller
 
     
   }
+  
+public function updatePhoto() {
+  if (isset($_POST['submit'])) {
+      if (!empty($_FILES['image']) && !empty($_POST['name-pharma']) && !empty($_POST['localisation']) && !empty($_POST['phone'])) {
+
+        echo"heloo";
+          $new_image = $_FILES['image']['tmp_name'];
+          $data = [
+              'id_pharmacy' => $_POST['id'],
+              'name_pharma' => $_POST['name-pharma'],
+              'old_image' => $_POST['old_image'],
+              'phone'    =>$_POST['phone'],
+              'image' => $_FILES['image']['name'],
+              'localisation' => $_POST['localisation'],
+          ];
+          $old_image = $data['old_image'];
+          $path="C:\\xampp\htdocs\\projet_fils_rouge\public\assets\img/$old_image";
+          chown($path, 666);
+         
+          
+              if ($this->uploadPhoto($new_image) === true) {
+                  $this->adminModel->updatePhoto($data);
+
+                  header('location:' . URLROOT . '/ControllerCompte/index');
+              }
+          
+      }
+  }
+  
+}
+
 
 
 

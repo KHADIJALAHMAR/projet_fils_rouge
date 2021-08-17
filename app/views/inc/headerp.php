@@ -52,6 +52,10 @@
         <a class="nav-link  text-muted"  href="<?php echo URLROOT; ?>/ControllerAdmin/index"><span class="fas fa-user" style="color:#42B130" ></span>Dashboard</a>
         <?php endif; ?>
         </li>
+        <?php if(isset($_SESSION['role']) ) : ?>
+        <a class="nav-link  text-muted"  href="<?php echo URLROOT; ?>/ControllerAdmin/logout">logout</a>
+        <?php endif; ?>
+        </li>
       </ul>
     </div>
   </nav>

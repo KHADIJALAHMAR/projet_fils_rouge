@@ -1,7 +1,7 @@
 <?php include_once APPROOT . '/views/inc/header.php'; ?>
 <?php include_once APPROOT . '/views/inc/navbar.php';?>
 
-<?php var_dump($data)?>
+
 <div class="row py-5 px-4 main-profil">
     <div class="col-md-5 mx-auto">
         <!-- Profile widget -->

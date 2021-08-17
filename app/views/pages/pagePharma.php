@@ -22,11 +22,11 @@
 </div>
 </div>
 <!-- button -->
-<!-- <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
+<?php if(isset($_SESSION['role']) && $_SESSION['role'] == "Admin"): ?>
   <div class="container">
-<button>Ajouter</button>
+  <a class="btn btn-primary"  href="<?php echo URLROOT; ?>/ControllerPharma/show_gard">Ajouter</a>
 <?php endif; ?>
-</div> -->
+</div>
 <!-- card tous pharma -->
 <!--  -->
 <!-- maps -->

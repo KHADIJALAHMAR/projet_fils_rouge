@@ -80,9 +80,14 @@ if (!isset($_SESSION['id_user'])) {
     header('location:'.URLROOT .'/ControllerCompte/index' );
   }
   
+public function show_gard(){
+  $result = $this->modelpharma->show();
+  $this->view('pages/Admin/pharmaGard',$result);
+}
 
-
-
+public function update_to_gard(){
+  
+}
 
   
 

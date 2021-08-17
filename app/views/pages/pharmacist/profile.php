@@ -41,8 +41,8 @@
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <h5 class="mb-0">Post</h5><a href="#" class="btn btn-link text-muted">Show all</a>
                 </div>
-                <div class="row">
-                <div class="profile-info col-md-9">
+                <div class="row w-100">
+                <div class="profile-info col-md-9 w-100">
       <div class="panel">
           <footer class="panel-footer">
               <a href="<?php echo URLROOT; ?>/ControllerPharma/insert" class="btn btn-warning pull-right">create Post</a>
@@ -50,17 +50,20 @@
           </footer>
       </div>
       <!-- tous pharma -->
-      <div class="content-p">
+      <div class="content-p w-100">
 <?php if ($data): ?>
-<div class="card content " style="width: 18rem;">
+<div class="card content mx-auto " style="width: 18rem;">
     <img src="<?= URLROOT."/assets/img/".$data->image; ?>" class="card-img-top" alt="img">
     <div class="card-body">
     <h5 class="card-title" ><?php echo $data->name_pharma ?></h5>
     <a href="#" class="card-link">Localisation :<?php echo $data->localisation ?></a>
     <p class="card-text"><?php echo $data->phone?></p>
-    <a href="<?php echo URLROOT;?> /ControllerCompte/delete/<?= $data->id_pharmacy; ?>"class="btn btn-danger" <span class="glyphicon glyphicon-trash"></span>Delete<a> 
-                    <a href="<?php echo URLROOT;?>/ControllerCompte/edit/<?php echo $data->id_pharmacy;?>"class="btn btn-success" 
-                    <span class="glyphicon glyphicon-pencil"></span>Edit</a>
+    <div class="d-flex">
+        <a href="<?php echo URLROOT;?> /ControllerCompte/delete/<?= $data->id_pharmacy; ?>"class="btn btn-danger mr-1" <span class="glyphicon glyphicon-trash"></span>Delete<a> 
+        <a href="<?php echo URLROOT;?>/ControllerCompte/edit/<?php echo $data->id_pharmacy;?>"class="btn btn-success ml-1" 
+        <span class="glyphicon glyphicon-pencil"></span>Edit</a>
+    </div>
+    
    
   </div>
 <?php endif; ?>

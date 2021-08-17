@@ -250,4 +250,13 @@ public function delete($id_pharmacy)
  // echo $_GET['id'];
 }
 
+
+public function logout(){
+  unset($_SESSION['id_user']);
+  unset($_SESSION['email']);
+  unset($_SESSION['fname']);
+  unset($_SESSION['role']);
+  header('location:' . URLROOT . '/ControllerCompte/select');
+}
+
 }

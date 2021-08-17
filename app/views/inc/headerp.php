@@ -66,6 +66,8 @@
     class="p-5 text-center bg-image"
     style="
       background-image: url('<?php echo URLROOT; ?>/assets/img/imggard.png');
+      background-size: cover;
+      background-repeat: no-repeat;
       height: 100vh;
     "
   >

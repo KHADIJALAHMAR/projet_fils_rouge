@@ -1,8 +1,8 @@
 <?php include_once APPROOT . '/views/inc/headerp.php'; ?>
 <!-- flèche pharmacie de gard -->
-<div class="parent-pharma row content-p  ">
+<div class="parent-pharma row content-p w-100">
 <div class="child-1 ">
-    <p class="ml-2 mt-1">Gard pharmacies</p>
+    <p class="ml-2 mt-1 font-weight-bold">Gard pharmacies</p>
 </div>
     <div class="child-2 ">
 
@@ -10,8 +10,8 @@
 </div>
 <!-- pharma gard -->
 <div class="content-p">
-<div class="card content " style="width: 18rem;">
-    <img src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top" alt="img">
+<div class="card content  " style="width: 18rem;">
+    <img  src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top " class=""  alt="img">
     <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <a href="#" class="card-link">Localisation</a>
@@ -22,11 +22,11 @@
 </div>
 </div>
 <!-- button -->
-<?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
+<!-- <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "pharmacist"): ?>
   <div class="container">
 <button>Ajouter</button>
 <?php endif; ?>
-</div>
+</div> -->
 <!-- card tous pharma -->
 <!--  -->
 <!-- maps -->

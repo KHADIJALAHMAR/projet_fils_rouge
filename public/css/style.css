@@ -164,23 +164,25 @@ body{
 /* partie pharmacie */
 /* class géneral */
 .child-1{
-    height: 40px;
+    height: 50px;
     background-color:#42B130;
     color:#E8E4E6;
   
+}
+.child-1 > p {
+    font-size: 20px;
+    margin: 0;
 }
 .child-2{
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 0 20px 80px;
+    border-width: 25px 0 25px 80px;
     border-color: transparent transparent transparent #42B130;
 
 }
 .parent-pharma{
-    float:left ;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 /* profilupdat */
@@ -191,7 +193,4 @@ body{
 /* bootstrap dashbord admin Css #######################################################################*/
 .root-m{
     background-color: #009d63;
-    /* --main-text-color: #009d63;
-    --second-text-color: #bbbec5;
-    --second-bg-color: #c1efde; */
 }

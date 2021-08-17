@@ -47,19 +47,7 @@ public function get_pharma($id_user){
     return $results;
 }
 
-public function update_garde_to_null(){
-    
-    
-   
-    $this->db->query("UPDATE `pharmacy` SET is_garde = NUll ");
-    if ($this->db->execute()) {
-        return true;
-    } else {
-        return false;
-    }
-    
-    
-}
+
 
 
 

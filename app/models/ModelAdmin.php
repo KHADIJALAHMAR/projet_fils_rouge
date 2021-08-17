@@ -76,4 +76,44 @@ public function updatePhoto($data) {
         }
     }
     
+
+
+
+    public function update_garde_to_null(){
+    
+    
+   
+        $this->db->query("UPDATE `pharmacy` SET is_garde = NUll ");
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+        
+        
+    }
+
+
+
+    public function update_garde($id_pharmacy){
+    
+    
+   
+        $this->db->query("UPDATE `pharmacy` SET is_garde = 1 WHERE id_pharmacy = :id_pharmacy ");
+        $this->db->bind(':id_pharmacy' ,$id_pharmacy);
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+        
+        
+    }
+
+
+
+
+    
+
+    
     }

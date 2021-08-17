@@ -11,11 +11,11 @@
 <!-- pharma gard -->
 <div class="content-p">
 <div class="card content  " style="width: 18rem;">
-    <img  src="<?php echo URLROOT; ?>/assets/img/pharma1.jpg" class="card-img-top " class=""  alt="img">
+    <img  src="<?php echo URLROOT; ?>/assets/img/<?= $data['garde_pharmacy']->image ?>" class="card-img-top " class=""  alt="img">
     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="card-link">Localisation</a>
-    <p class="card-text">Numéro de téléphone</p>
+    <h5 class="card-title"><?= $data['garde_pharmacy']->name_pharma ?></h5>
+    <a href="#" class="card-link"><?= $data['garde_pharmacy']->localisation ?></a>
+    <p class="card-text"><?= $data['garde_pharmacy']->phone ?></p>
 
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -37,7 +37,7 @@
     <div class="container">
   
     <div class="row row-cols-1 row-cols-md-2 g-4  ">
-    <?php foreach ($data as $row):?>
+    <?php foreach ($data['pharmacies'] as $row):?>
     <div class="col-md-4 content-p">
     <div class="card ">
     <div class="inner">
@@ -52,7 +52,9 @@
   </div>
   <?php endforeach;?>
     </div>
+    
     </div>
+    <?php include_once APPROOT . '/views/inc/footer.php'; ?>
   
     
     

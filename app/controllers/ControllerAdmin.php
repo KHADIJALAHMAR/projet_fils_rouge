@@ -144,4 +144,11 @@ public function uploadPhoto($image)
       
     }
 
+    public function update_gard($id_pharmacy){
+      
+      $this->adminModel->update_garde_to_null();
+      $this->adminModel->update_garde($id_pharmacy);
+
+      header('location:' . URLROOT . '/' . '/ControllerPharma/show_gard?success=1');
+    }
 }

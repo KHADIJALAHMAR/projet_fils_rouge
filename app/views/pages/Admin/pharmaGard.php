@@ -1,5 +1,10 @@
 <?php include_once APPROOT . '/views/inc/header.php'; ?>
 
+<?php if (isset($_GET['success'])): ?>
+<div class="alert alert-success content mx-auto my-5" role="alert">
+  gard pharmacy added succefully
+</div>
+<?php endif; ?>
 
 <div class="content mx-auto mt-4">
   <table class="table bg-white rounded shadow-sm  table-hover">
@@ -25,7 +30,7 @@
                     <td id="m1"><?php echo $pharmacy->phone?></td>
                     <td id="m1"><?php echo $pharmacy->image ?></td>
                     <td id="m1"><?php echo $pharmacy->id_user ?></td>
-                    <td id="m1"><a href="" class="btn btn-primary">update to garde</a></td>
+                    <td id="m1"><a href="<?php echo URLROOT; ?>/ControllerAdmin/update_gard/<?php echo $pharmacy->id_pharmacy ?>" class="btn btn-primary">update to garde</a></td>
                     
                    
 		        </tr>

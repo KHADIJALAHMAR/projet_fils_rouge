@@ -47,7 +47,10 @@ public function get_pharma($id_user){
     return $results;
 }
 
-
+public function get_gard_pharma(){
+    $this->db->query("SELECT * FROM pharmacy  WHERE  is_garde = 1" );
+    return $this->db->single();
+}
 
 
 

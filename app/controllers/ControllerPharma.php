@@ -6,9 +6,14 @@ class ControllerPharma extends Controller{
         $this->session = new Session;
     }
     public function index(){
-        $result = $this->modelpharma->show();
+        $pharmacies = $this->modelpharma->show();
+        $garde_pharmacy = $this->modelpharma->get_gard_pharma();
         
-        $this->view('pages/pagePharma',$result);
+        $data = [
+          'pharmacies' => $pharmacies,
+          'garde_pharmacy' => $garde_pharmacy
+        ];
+        $this->view('pages/pagePharma',$data);
     }
 
 
